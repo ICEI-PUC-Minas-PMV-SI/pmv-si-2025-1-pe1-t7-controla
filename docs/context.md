@@ -2,7 +2,7 @@
 
 Em um mundo onde a complexidade das finanças pessoais pode gerar ansiedade e incerteza, a necessidade de ferramentas eficazes para o gerenciamento do dinheiro se torna cada vez mais evidente. Apresentamos um aplicativo de gestão financeira pessoal projetado para capacitar os usuários a assumirem o controle de suas finanças, tomarem decisões informadas e alcançarem seus objetivos financeiros com confiança.
 
-Este aplicativo surge da compreensão profunda dos desafios enfrentados por indivíduos na organização e controle de suas finanças. A falta de visibilidade sobre gastos, a dificuldade em criar e manter orçamentos, o desafio de economizar e planejar o futuro, e a complexidade do gerenciamento de dívidas são apenas alguns dos obstáculos que nosso aplicativo visa superar.
+Este aplicativo surge da compreensão dos desafios enfrentados por indivíduos na organização e controle de suas finanças. A falta de visibilidade sobre gastos, a dificuldade em criar e manter orçamentos, o desafio de economizar e planejar o futuro, e a complexidade do gerenciamento de dívidas são apenas alguns dos obstáculos que nosso aplicativo visa superar.
 
 Com uma interface intuitiva e recursos abrangentes, nosso aplicativo oferece uma solução completa para o gerenciamento financeiro pessoal. Desde o registro e categorização de despesas e receitas até a criação de orçamentos personalizados e o acompanhamento de metas financeiras, nosso aplicativo fornece as ferramentas necessárias para que os usuários tomem decisões financeiras corretamente.
 
