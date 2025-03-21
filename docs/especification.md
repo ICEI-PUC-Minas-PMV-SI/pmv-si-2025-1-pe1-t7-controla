@@ -48,8 +48,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | ALTA |  
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês   | MÉDIA | 
+|RF-001| A aplicação deve realizar cálculos de soma e subtração entre os valores inseridos pelo usuário | ALTA |  
+|RF-002| A aplicação deve gerar gráficos referente aos valores fornecidos pelo usuário. | MÉDIA | 
 
 
 ### Requisitos não Funcionais
