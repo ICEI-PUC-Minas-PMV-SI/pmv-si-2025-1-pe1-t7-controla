@@ -58,8 +58,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| A aplicação deve ser responsiva | MÉDIA | 
 |RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| A aplicação deve estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis |
-|RNF-004| A aplicação deve se adaptar a diferentes tamanhos de tela e resoluções, proporcionando uma experiência otimizada em smartphones e tablets.  
+|RNF-003| A aplicação deve estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis | ALTA |
+|RNF-004| A aplicação deve se adaptar a diferentes tamanhos de tela e resoluções.  | MÉDIA |
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
