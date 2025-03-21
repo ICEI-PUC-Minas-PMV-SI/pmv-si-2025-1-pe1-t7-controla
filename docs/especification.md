@@ -50,6 +50,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----| 
 |RF-001| A aplicação deve realizar cálculos de soma e subtração entre os valores inseridos pelo usuário | ALTA |  
 |RF-002| A aplicação deve gerar gráficos referente aos valores fornecidos pelo usuário. | MÉDIA | 
+|RF-003| A aplicação deve permitir cadastro do usuário |MÉDIA|
 
 
 ### Requisitos não Funcionais
