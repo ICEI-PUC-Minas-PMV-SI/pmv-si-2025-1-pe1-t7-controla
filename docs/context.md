@@ -6,7 +6,7 @@ Este aplicativo surge da compreensão profunda dos desafios enfrentados por indi
 
 Com uma interface intuitiva e recursos abrangentes, nosso aplicativo oferece uma solução completa para o gerenciamento financeiro pessoal. Desde o registro e categorização automática de despesas e receitas até a criação de orçamentos personalizados e o acompanhamento de metas financeiras, nosso aplicativo fornece as ferramentas necessárias para que os usuários tomem decisões financeiras informadas.
 
-Além disso, nosso aplicativo prioriza a segurança e a privacidade dos dados financeiros dos usuários, implementando medidas robustas de proteção e garantindo a conformidade com as regulamentações de proteção de dados.
+Além disso, nosso aplicativo prioriza a segurança e a privacidade dos dados financeiros dos usuários, implementando medidas de proteção e garantindo a conformidade com as regulamentações de proteção de dados.
 
 Em resumo, nosso aplicativo de gestão financeira pessoal é mais do que apenas uma ferramenta; é um parceiro confiável que ajuda os usuários a construírem um futuro financeiro sólido e seguro.
 
