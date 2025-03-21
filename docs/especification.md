@@ -80,9 +80,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
+|01| O projeto deve ser entregue até o final do semestre. Isso exige um planejamento eficiente, priorizando as funcionalidades essenciais e evitando a implementação de recursos que demandariam mais tempo do que o disponível, para garantir que todas asetapas do projeto sejam concluídas dentro do tempo estipulado. |
+|02| O sistema deve ser completamente funcional utilizando apenas HTML, CSS e JavaScript. Nesta primeira etapa, vamos cuidar apenas da interação da aplicação com o usuário, desenvolvendo o lado interativo, ou seja, o que o usuário vê e com o que ele interage. Não será permitido o desenvolvimento de um módulo de backend para este projeto, com dados armazenados apenas localmente no próprio navegador, sem interação com banco de dados, autenticação, APIs ou servidor. Também não será possível criar um aplicativo mobile. |
+|03| A única tecnologia permitida para o desenvolvimento do projeto neste momento é HTML para estruturação, CSS para estilização e JavaScript para interatividade, todas aprendidas nesta primeira etapa. Não é permitido o uso de frameworks como React, PHP ou bibliotecas avançadas como Bootstrap. |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
