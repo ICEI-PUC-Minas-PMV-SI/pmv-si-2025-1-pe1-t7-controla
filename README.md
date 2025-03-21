@@ -1,4 +1,4 @@
-# Título do Projeto
+# Controla+
 
 `CURSO: Sistemas de Informação`
 
@@ -6,20 +6,21 @@
 
 `SEMESTRE: 1º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Controla+ é um aplicativo de gestão financeira pessoal eficaz para resolver uma série de problemas comuns enfrentados por indivíduos na organização e controle de suas finanças.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Bel Antonio de Aquino e Souza
+* Luiza Trevenzoli Castor
+* Felipe Fernandes Jardim
+* Andrey Carlos Saraiva
+* Nicole Mikaely Amaral Santos
+* Luiz Felipe Alves Costa
 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Prof. Álisson R. Arantes
 
 # Planejamento
 
