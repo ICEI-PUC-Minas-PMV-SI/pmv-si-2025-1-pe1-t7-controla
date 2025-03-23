@@ -27,15 +27,19 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+É considerável que a gestão de finanças pode impactar diretamente a vida da população. A má gestão dos recursos financeiros pode gerar endividamentos, falta de crédito no mercado, impossibilitando a realização de planos como, a compra de um imóvel, um veículo, por exemplo.  Segundo o BACEN (Banco Central do Brasil), a Educação Financeira é uma forma de promover melhoria na qualidade de vida das pessoas e da comunidade e auxilia no desenvolvimento econômico do país [1]. De acordo com uma pesquisa realizada pela Confederação Nacional do Comércio de Bens, Serviços e Turismo (CNC), 78,8% das famílias brasileiras estavam endividadas em maio de 2024, com um crescimento considerável desde novembro de 2022 [2]. O cartão de crédito corresponde a 86,9% das dívidas neste mesmo período [2], visto que o limite concedido através deste, pode ser considerado por muitos, um complemento da receita, e não um crédito propriamente dito.  
 
-Lembre-se de pesquisar e utilizar números que justifiquem por que é importante que tal problema seja resolvido ou que mostrem o impacto do problema na vida das pessoas.
+Devido à coleta destas informações, surgiu o tema para a construção desta aplicação, a fim de proporcionar maior autonomia financeira aos usuários auxiliando-os na organização das suas finanças pessoais, a fim de proporcionar uma visão clara da forma gerenciamento das receitas e despesas, através de gráficos gerados pela aplicação. Ao visualizar a destinação dos valores é possível traçar metas e objetivos para alcançar uma vida financeira saudável. Na aplicação também serão disponibilizados insights e dicas sobre como gerenciar o orçamento a fim de promover a educação financeira dos usurários. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Uma pesquisa realizada, através de um Formulário do Google, foram coletados dados referentes a Educação Financeira em um grupo de 44 pessoas. Os participantes, com faixa etária entre 20 e 60 anos ou mais. Destes 56,8% não organizam suas receitas mensais em categorias e 47,7% não possuí uma reserva de emergência. Também foi constatado que 61,4% não utilizam uma plataforma para organização das finanças. Quanto a utilização de cartões de crédito, 29,5% consideram que não o utiliza de forma saudável, o que pode gerar um endividamento futuro, caso a despesa deste se torne maior do que a receita gerada no mês. A realização desta pesquisa foi importante para demonstrar a importância e a necessidade da criação desta aplicação.  
 
 ## Público-Alvo
 
 O público-alvo deste projeto são brasileiros com idades entre 20 e 60 anos, que buscam aprimorar a gestão de suas finanças pessoais através plataformas digitais com o objetivo de alcançar maior estabilidade econômica. Esse grupo tem como metas a realização de conquistas significativas, como a aquisição do primeiro imóvel, a compra de um veículo familiar a realização de viagens internacionais ou o início em uma reserva de emergência. Além disso, essas pessoas desejam conquistar maior liberdade e segurança nas suas decisões financeiras, adotando práticas eficientes de monitoramento e controle de receitas e despesas que possibilitam o acompanhamento contínuo das finanças, promovendo uma gestão mais eficiente e estruturada do orçamento pessoal, visando o alcance de objetivos financeiros de médio e longo prazo. 
+
+## Referências
+
+[1] Banco Central do Brasil. Caderno de Educação Financeira – Gestão de Finanças Pessoais. Brasília: BCB,2013. 72 p. 
+
+[2] BRASIL, Agência. Dívidas de famílias atingem maior nível desde novembro de 2022: 78,8%.: pesquisa da cnc diz que sociedade segue elevando procura por crédito. Pesquisa da CNC diz que sociedade segue elevando procura por crédito. 2024. Disponível em: https://agenciabrasil.ebc.com.br/economia/noticia/2024-06/dividas-de-familias-atinge-o-maior-nivel-desde-novembro-de-2022-788. Acesso em: 23 mar. 2025.
+
