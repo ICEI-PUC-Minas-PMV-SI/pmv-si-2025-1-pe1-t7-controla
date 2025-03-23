@@ -54,21 +54,12 @@ Caso deseje atribuir uma imagem a sua persona, utilize o site https://thisperson
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+Com base na análise das personas, foram identificadas as seguintes histórias de usuários relevantes para o projeto **Controla+**, um site voltado à gestão financeira pessoal. As **Histórias de Usuário** são uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da aplicação, refletindo as necessidades reais dos usuários e os valores que a solução busca entregar.
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| **EU COMO... PERSONA**  | **QUERO/PRECISO ... FUNCIONALIDADE** | **PARA ... MOTIVO/VALOR** |
+|-------------------------|--------------------------------------|---------------------------|
+| Mariana Silva           | Registrar minhas despesas diárias incluindo valor, data e categoria | Identificar para onde meu dinheiro está indo e ajustar meus hábitos para economizar para meu apartamento |
+| João Oliveira           | Ver o quanto já gastei em cada categoria e o quanto ainda tenho disponível no meu orçamento | Tomar decisões financeiras mais inteligentes e criar uma reserva de emergência sólida |
 
 ## Requisitos
 
