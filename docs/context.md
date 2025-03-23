@@ -12,16 +12,7 @@ Em resumo, nosso aplicativo de gestão financeira pessoal é mais do que apenas 
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, **não** é a hora de comentar sobre a solução/aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Atualmente é comum vermos as pessoas lidando com desafios para administrar suas finanças de maneira eficiente. Ter dificuldade em manter tudo organizado e sob controle em relação ao dinheiro que entra e sai pode resultar em dívidas acumuladas, aquisição impulsiva de produtos e obstáculos para alcançar metas financeiras como constituir uma reserva para emergências, investimentos ou conquistas pessoais. As pessoam lidam com esses obstáculos na administração financeira, pois misturam as prioridades de fato, com gastos Fúteis em geral, um cenário bastante comum na sociedade. Aplicativos como bancos online e carteiras eletrônicas fornecem várias facilidades, mas nem sempre oferecem uma visão abrangente e fácil de entender as finanças de formal mais simples e organizada. Isso acaba que obriga as pessoas a recorrer para planilhas feitas à mão ou agendas por exemplo, com muitas anotações bagunçadas que torna difícil acompanhar de forma eficiente a situação financeira pessoal.
 
 ## Objetivos
 
