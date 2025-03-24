@@ -18,12 +18,12 @@ Isso acaba que obriga as pessoas a recorrer para planilhas feitas à mão ou age
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desenvolver uma aplicação de controle de finanças pessoais que permita aos usuários gerenciar suas receitas, despesas de forma intuitiva e eficiente, promovendo a organização financeira e a tomada de decisões conscientes para alcançar metas econômicas.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivos Específicos:
+Implementar funcionalidades básicas de registro e categorização de receitas e despesas, com visualização de saldo atualizado em tempo real.
+Oferecer relatórios e gráficos personalizados para análise do comportamento financeiro, ajudando os usuários a identificar padrões de gastos e oportunidades de economia.
+
 
 ## Justificativa
 
