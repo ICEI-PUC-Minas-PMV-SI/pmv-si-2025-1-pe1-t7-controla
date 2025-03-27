@@ -36,10 +36,3 @@ Uma pesquisa realizada, através de um Formulário do Google, foram coletados da
 ## Público-Alvo
 
 O público-alvo deste projeto são brasileiros com idades entre 20 e 60 anos, que buscam aprimorar a gestão de suas finanças pessoais através plataformas digitais com o objetivo de alcançar maior estabilidade econômica. Esse grupo tem como metas a realização de conquistas significativas, como a aquisição do primeiro imóvel, a compra de um veículo familiar a realização de viagens internacionais ou o início em uma reserva de emergência. Além disso, essas pessoas desejam conquistar maior liberdade e segurança nas suas decisões financeiras, adotando práticas eficientes de monitoramento e controle de receitas e despesas que possibilitam o acompanhamento contínuo das finanças, promovendo uma gestão mais eficiente e estruturada do orçamento pessoal, visando o alcance de objetivos financeiros de médio e longo prazo. 
-
-## Referências
-
-[1] Banco Central do Brasil. Caderno de Educação Financeira – Gestão de Finanças Pessoais. Brasília: BCB,2013. 72 p. 
-
-[2] BRASIL, Agência. Dívidas de famílias atingem maior nível desde novembro de 2022: 78,8%.: pesquisa da cnc diz que sociedade segue elevando procura por crédito. Pesquisa da CNC diz que sociedade segue elevando procura por crédito. 2024. Disponível em: https://agenciabrasil.ebc.com.br/economia/noticia/2024-06/dividas-de-familias-atinge-o-maior-nivel-desde-novembro-de-2022-788. Acesso em: 23 mar. 2025.
-
