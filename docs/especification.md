@@ -63,10 +63,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve realizar cálculos de soma e subtração entre os valores inseridos pelo usuário. | ALTA |  
-|RF-002| A aplicação deve gerar gráficos referente aos valores fornecidos pelo usuário. | MÉDIA | 
-|RF-003| A aplicação deve permitir cadastro do usuário. |MÉDIA|
-|RF-004| A aplicação deve permitir que os usuários registrem suas despesas, incluindo valor, data e categoria. |ALTA|
+|RF-001| A aplicação deve permitir cadastro do usuário. | ALTA |  
+|RF-002| A aplicação deve gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas | MÉDIA | 
+|RF-003| A aplicação deve gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses | MÉDIA |  
+|RF-003| A aplicação deve permitir que o usuário edite as categorias. |MÉDIA|
+|RF-004| A aplicação deve permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) e 
+         tipos de despesa (moradia, alimentação, transporte, lazer, etc.). |ALTA|
 
 
 
