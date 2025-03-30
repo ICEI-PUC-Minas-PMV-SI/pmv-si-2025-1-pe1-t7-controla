@@ -63,12 +63,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
-|RF-001| A aplicação deve permitir cadastro do usuário. | ALTA |  
-|RF-002| A aplicação deve gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas | MÉDIA | 
-|RF-003| A aplicação deve gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses | MÉDIA |  
-|RF-003| A aplicação deve permitir que o usuário edite as categorias. |MÉDIA|
-|RF-004| A aplicação deve permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) e 
-         tipos de despesa (moradia, alimentação, transporte, lazer, etc.). |ALTA|
+|RF-01|  Permitir cadastro do usuário. | ALTA |  
+|RF-02|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  | MÉDIA | 
+|RF-03|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses | MÉDIA |  
+|RF-04|  Permitir que o usuário edite as categorias. |MÉDIA|
+|RF-05|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |ALTA|
+|RF-06|  Permitir o registro dos tipos de despesa (moradia, alimentação, transporte, lazer, etc.)      |ALTA|
 
 
 
@@ -76,10 +76,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| A aplicação deve ser responsiva | MÉDIA | 
-|RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| A aplicação deve estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis | ALTA |
-|RNF-004| A aplicação deve se adaptar a diferentes tamanhos de tela e resoluções.  | MÉDIA |
+|RNF-01| A aplicação deve ser responsiva | MÉDIA | 
+|RNF-02| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-03| Estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis | ALTA |
+|RNF-04| Deve se adaptar a diferentes tamanhos de tela e resoluções.  | MÉDIA |
 
 
 ## Restrições
