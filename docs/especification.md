@@ -64,13 +64,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade | 
 |------|-----------------------------------------|----| 
 |RF-01|  Permitir cadastro do usuário | MÉDIA | 
-|RF-01|  Permitir login do usuário    | MÉDIA | 
-|RF-01|  Permitir o usuário recuperar a senha | MÉDIA | 
-|RF-02|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  | MÉDIA | 
-|RF-03|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses | MÉDIA |  
-|RF-04|  Permitir que o usuário edite as categorias. |MÉDIA|
-|RF-05|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |ALTA|
-|RF-06|  Permitir o registro dos tipos de despesa (moradia, alimentação, transporte, lazer, etc.)      |ALTA|
+|RF-02|  Permitir login do usuário    | MÉDIA | 
+|RF-03|  Permitir o usuário recuperar a senha | MÉDIA | 
+|RF-04|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  | MÉDIA | 
+|RF-05|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses | MÉDIA |  
+|RF-06|  Permitir que o usuário edite as categorias. |MÉDIA|
+|RF-07|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |ALTA|
+|RF-08|  Permitir o registro dos tipos de despesa (moradia, alimentação, transporte, lazer, etc.)      |ALTA|
 
 
 
