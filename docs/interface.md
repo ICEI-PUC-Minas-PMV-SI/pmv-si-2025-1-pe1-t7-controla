@@ -23,7 +23,7 @@ São protótipos usados em design de interface para sugerir a estrutura de um si
 
 ## Dashboard
 No wireframe de dashboard construimos uma visão inicial do que seria a home do nosso projeto
-![Wireframe Dashboard](img/wireframe-dashboard-1.pdf)
+![Wireframe Dashboard](img/wireframe-dashboard-1.jpg)
 
 ### Exemplo
 
