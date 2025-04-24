@@ -36,6 +36,10 @@ No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do qu
 No wireframe de dashboard construimos uma visão inicial do que seria a home do nosso projeto
 ![Wireframe Dashboard](img/wireframe-dashboard-1.jpg)
 
+## Transações
+No wireframe de transações construimos uma visão inicial de como o usuário conseguirá visualizar todas as transações financeiras registradas durante o período selecionado.
+![Wireframe Dashboard](img/wireframe-transacoes.png)
+
 ## Categorias
 Nesse wireframe podemos ter a visão inicial da tela de inclusão e edição de categorias de transações
 ![Wireframe-categorias](img/wireframe-categorias.jpg).
