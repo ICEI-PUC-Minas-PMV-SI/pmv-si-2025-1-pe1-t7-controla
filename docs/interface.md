@@ -31,8 +31,8 @@ No wireframe de dashboard construimos uma visão inicial do que seria a home do 
 ![Wireframe Dashboard](img/wireframe-dashboard-1.jpg)
 
 ## Categorias
-Nesse wireframe podemos ter a visão inicial da tela de inclusão e edição de categorias de transações.
-![Wireframe-categorias].(img/wireframe-categorias.jpg).
+Nesse wireframe podemos ter a visão inicial da tela de inclusão e edição de categorias de transações
+![Wireframe-categorias](img/wireframe-categorias.jpg).
 
 ## Login, Cadastro e Recuperacao 
 No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do que seria a tela onde o usuario ira se cadastrar, logar e recuperar sua senha 
