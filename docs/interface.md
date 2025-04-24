@@ -61,3 +61,14 @@ Inclui gráficos interativos: um de pizza (65% crédito, 35% débito) e outro de
 ![Protótipo Dashboard](img/prototipo-dashboard.png)
 
 [⬇ User Flow (PDF)](img/prototipo-dashboard.pdf)
+
+
+### Receitas
+
+![Protótipo Dashboard](img/Receitas.p.png)
+
+
+### Despesas
+
+![Protótipo Dashboard](img/Despesas.p.png)
+
