@@ -33,12 +33,18 @@ Cada cor equilibra estética e funcionalidade, alinhando-se à usabilidade e ao 
 Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
 
 
-## Iconografia
+### Iconografia do Controla+
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+A iconografia do Controla+ prioriza clareza e usabilidade em um site de controle financeiro, utilizando ícones das bibliotecas livres **Phosphor Icons** e **Ionicons** para evitar violação de direitos autorais.  
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+- **Seleção de Ícones:** Inclui símbolos intuitivos como casa (Home), calendário, gráficos e cifrão, alinhados às funções financeiras, garantindo reconhecimento imediato.  
+- **Estilo Visual:** Ícones vetoriais com traços limpos e consistentes, otimizados para os modos claro e escuro da paleta, mantendo legibilidade.  
+- **Licenciamento Seguro:** Uso exclusivo de bibliotecas open-source, respeitando licenças e promovendo conformidade legal.  
+
+A escolha reflete um design funcional e ético, focado na experiência do usuário.
+![Iconografia do Controla+](img/Iconografia.png)
+
+[⬇ Iconografia (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/docs/img/Iconografia.pdf)
 
 
 > **Links Úteis**:
