@@ -33,7 +33,7 @@ No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do qu
 ### Dashboard
 No wireframe do dashboard, elaboramos a visão inicial da Home do Controla+, estruturando uma interface que centraliza as informações financeiras mais relevantes para o usuário.
 ![Wireframe Dashboard](img/wireframe-dashboard-1.jpg)
-[⬇ Wireframe - Dashboard - 1 (PDF)](/img/wireframe-dashboard-1..pdf)
+[⬇ Wireframe - Dashboard - 1 (PDF)](/img/wireframe-dashboard-1.pdf)
 
 ### Transações
 No wireframe de transações construimos uma visão inicial de como o usuário conseguirá visualizar todas as transações financeiras registradas durante o período selecionado.
