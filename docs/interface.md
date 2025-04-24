@@ -7,17 +7,14 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+O diagrama de User flow abaixo apresenta o caminho percorrido pelo usuário dentro do site. Ele foi desenvolvido para garantir uma navegação simples, intuitiva e centrada na experiência do usuário, refletindo o objetivo do projeto facilitar o controle financeiro.
+![Wireframe Dashboard](img/UserFlow.png)
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+[⬇ User Flow (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/docs/img/UserFlow.pdf)
 
 
 ## Wireframes
+
 ## Login
 ![Wireframe login](img/Login.png)
 ## Cadastro 
@@ -51,20 +48,3 @@ A tela de receitas apresenta no lado direito registros de receitas, o usuário p
 ## Despesas
 A tela de despesas apresenta no lado direito registros de despesas, o usuário pode adicionar uma nova despesa descrevendo data, valor, categoria e método de pagamento. Ao lado esquerdo o usuario pode visualizar um pequeno histórico com as ultimas despesas adicionadas.
 ![Wireframe Dashboard](img/Despesas.png)
-
-
-### Exemplo
-
-A tela inicial apresenta um menu lateral com as principais seções do portal, enquanto a navigation bar, ao topo, apresenta informações de envio de imagens ou navegação pela galeria de fotos. A área central apresenta a galeria de fotos na forma de uma grade. Nesta tela, são apresentados os seguintes requisitos
-
-![Exemplo de Wireframe](img/wireframe-example.png)
-
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
