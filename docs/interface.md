@@ -30,6 +30,12 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 No wireframe de dashboard construimos uma visão inicial do que seria a home do nosso projeto
 ![Wireframe Dashboard](img/wireframe-dashboard-1.jpg)
 
+## Login, Cadastro e Recuperacao 
+No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do que seria a tela onde o usuario ira se cadastrar, logar e recuperar sua senha 
+![Wireframe Login](img/Login.png).
+![Wireframe Cadastro](img/Cadastro.png).
+![Wireframe Recuperacao de Senha](img/Recuperar.png).
+
 
 ## Receitas
 A tela de receitas apresenta no lado direito registros de receitas, o usuário pode adicionar uma nova receita descrevendo data, valor, categoria e método de recebimento. Ao lado esquerdo o usuario pode visualizar um pequeno histórico com as ultimas receitas adicionadas.
