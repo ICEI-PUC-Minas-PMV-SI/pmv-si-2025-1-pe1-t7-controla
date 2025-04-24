@@ -44,10 +44,14 @@ No wireframe de transações construimos uma visão inicial de como o usuário c
 Nesse wireframe podemos ter a visão inicial da tela de inclusão e edição de categorias de transações
 ![Wireframe-categorias](img/wireframe-categorias.jpg).
 
-
 ## Receitas
 A tela de receitas apresenta no lado direito registros de receitas, o usuário pode adicionar uma nova receita descrevendo data, valor, categoria e método de recebimento. Ao lado esquerdo o usuario pode visualizar um pequeno histórico com as ultimas receitas adicionadas.
 ![Wireframe Dashboard](img/Receitas.png)
+
+## Despesas
+A tela de despesas apresenta no lado direito registros de despesas, o usuário pode adicionar uma nova despesa descrevendo data, valor, categoria e método de pagamento. Ao lado esquerdo o usuario pode visualizar um pequeno histórico com as ultimas despesas adicionadas.
+![Wireframe Dashboard](img/Despesas.png)
+
 
 ### Exemplo
 
