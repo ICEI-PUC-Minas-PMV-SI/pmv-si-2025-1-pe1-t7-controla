@@ -9,9 +9,23 @@ Explique as guias de estilo utilizadas no seu projeto.
 Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
 
 
-## Cores
+## Paleta de Cores do Controla+
+A paleta de cores do Controla+ foi projetada para transmitir confiabilidade e clareza em um site de controle financeiro, com modos claro e escuro para acessibilidade.  
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+### Modo Escuro
+- **Texto (#e0e4db):** Alto contraste contra o fundo (#191d17), reduzindo fadiga visual.  
+- **Hover (#152611):** Sutil para interatividade.  
+- **Stroke (#a1d39a) e Highlight (#2e572d):** Tons de verde que evocam estabilidade e crescimento, reforçando a identidade financeira.  
+
+### Modo Claro
+- **Texto (#52634f):** Suave contra o fundo (#f1f5ec), priorizando legibilidade.  
+- **Hover (#edf1e8):** Transições delicadas.  
+- **Stroke (#3b6929) e Highlight (#bcf0b4):** Consistência tonal, promovendo confiança e foco.  
+
+Cada cor equilibra estética e funcionalidade, alinhando-se à usabilidade e ao contexto financeiro.
+![Paleta de Cores do Controla+](img/paleta-de-cores.jpg)
+
+[⬇ Paleta de Cores (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/docs/img/paleta-de-cores.pdf)
 
 
 ## Tipografia
