@@ -28,9 +28,19 @@ Cada cor equilibra estética e funcionalidade, alinhando-se à usabilidade e ao 
 [⬇ Paleta de Cores (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/docs/img/paleta-de-cores.pdf)
 
 
-## Tipografia
+## Tipografia do Controla+
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+A tipografia do Controla+ utiliza a fonte **Inter**, acessada via Google Fonts, para garantir consistência e legibilidade em um site de controle financeiro.  
+
+- **Título de Página (Heading / H1):** 42px (2.625rem), line-height 50px, peso Bold, para destacar e estruturar páginas com clareza.  
+- **Título de Seção (Heading / H2):** 26px (1.625rem), line-height 34px, peso Medium, para organizar seções de forma hierárquica.  
+- **Rótulos de Componentes (Body / Regular):** 16px (1rem), line-height 24px, peso Regular, para clareza em labels e botões.  
+- **Corpo de Texto (Body / Small):** 14px (0.875rem), line-height 20px, peso Regular, para textos longos com conforto visual.  
+
+A escolha da Inter assegura uma estética moderna e funcional, otimizada para finanças.
+![Tipografia do Controla+](img/tipografia.png)
+
+[⬇ Tipografia (PDF)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/docs/img/tipografia.pdf)
 
 
 ### Iconografia do Controla+
