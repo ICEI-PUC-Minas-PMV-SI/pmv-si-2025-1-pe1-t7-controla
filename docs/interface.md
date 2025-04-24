@@ -25,6 +25,12 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 ## Recuperar 
 ![Wireframe login](img/Recuperar.png)
 
+## Login, Cadastro e Recuperacao 
+No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do que seria a tela onde o usuario ira se cadastrar, logar e recuperar sua senha 
+![Wireframe Login](img/Login.png).
+![Wireframe Cadastro](img/Cadastro.png).
+![Wireframe Recuperacao de Senha](img/Recuperar.png).
+
 
 ## Dashboard
 No wireframe de dashboard construimos uma visão inicial do que seria a home do nosso projeto
@@ -33,12 +39,6 @@ No wireframe de dashboard construimos uma visão inicial do que seria a home do 
 ## Categorias
 Nesse wireframe podemos ter a visão inicial da tela de inclusão e edição de categorias de transações
 ![Wireframe-categorias](img/wireframe-categorias.jpg).
-
-## Login, Cadastro e Recuperacao 
-No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do que seria a tela onde o usuario ira se cadastrar, logar e recuperar sua senha 
-![Wireframe Login](img/Login.png).
-![Wireframe Cadastro](img/Cadastro.png).
-![Wireframe Recuperacao de Senha](img/Recuperar.png).
 
 
 ## Receitas
