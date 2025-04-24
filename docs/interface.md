@@ -21,13 +21,7 @@ O diagrama de User flow abaixo apresenta o caminho percorrido pelo usuário dent
 ![Wireframe login](img/Login.png)
 ### Cadastro 
 ![Wireframe login](img/Cadastro.png)
-### Recuperar 
-![Wireframe login](img/Recuperar.png)
-
-### Login, Cadastro e Recuperacao 
-No wirefrane de login, cadastro e recuperacao contruimos uma visao inicial do que seria a tela onde o usuario ira se cadastrar, logar e recuperar sua senha 
-![Wireframe Login](img/Login.png).
-![Wireframe Cadastro](img/Cadastro.png).
+### Recuperar Senha 
 ![Wireframe Recuperacao de Senha](img/Recuperar.png).
 
 ### Dashboard
