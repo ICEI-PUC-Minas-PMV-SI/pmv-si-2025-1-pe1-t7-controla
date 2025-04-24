@@ -13,7 +13,7 @@ As principais telas incluem:
 O diagrama de User flow abaixo apresenta o caminho percorrido pelo usuário dentro do site. Ele foi desenvolvido para garantir uma navegação simples, intuitiva e centrada na experiência do usuário, refletindo o objetivo do projeto facilitar o controle financeiro.
 ![Wireframe Dashboard](img/UserFlow.png)
 
-[⬇ User Flow (PDF)](/img/UserFlow.pdf)
+[⬇ User Flow (PDF)](img/UserFlow.pdf)
 
 ## Wireframes
 
@@ -60,4 +60,4 @@ O protótipo do Dashboard exibe a Home do Controla+, com cards de "Saldo Atual" 
 Inclui gráficos interativos: um de pizza (65% crédito, 35% débito) e outro de linha para evolução de receitas/despesas, com filtros (Diário, Semanal, Mensal). A sidebar à esquerda tem ícones para navegação, e o logo "C+" está no topo, com dropdown de perfil à direita.
 ![Protótipo Dashboard](img/prototipo-dashboard.png)
 
-[⬇ User Flow (PDF)](/img/prototipo-dashboard.pdf)
+[⬇ User Flow (PDF)](img/prototipo-dashboard.pdf)
