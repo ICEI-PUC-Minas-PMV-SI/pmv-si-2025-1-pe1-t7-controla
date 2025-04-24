@@ -29,7 +29,7 @@ No wireframe de dashboard construimos uma visão inicial do que seria a home do 
 
 ## Receitas
 A tela de receitas apresenta no lado direito registros de receitas, o usuário pode adicionar uma nova receita descrevendo data, valor, categoria e método de recebimento. Ao lado esquerdo o usuario pode visualizar um pequeno histórico com as ultimas receitas adicionadas.
-![Wireframe Dashboard](img/wireframe-Receitas(1).png)
+![Wireframe Dashboard](img/Receitas(1).png)
 
 ### Exemplo
 
