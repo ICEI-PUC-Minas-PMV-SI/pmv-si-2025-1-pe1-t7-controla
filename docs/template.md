@@ -1,12 +1,21 @@
 # Template padrão do site
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+## Design do Controla+
 
-Explique as guias de estilo utilizadas no seu projeto.
+O design do Controla+ é estruturado para oferecer uma experiência intuitiva e consistente, com layouts que priorizam usabilidade e identidade visual em um contexto financeiro. Abaixo estão os detalhes:
 
-## Design
+- **Layouts Utilizados:** O site segue um layout de página única com seções bem definidas: **header**, **main** e **footer**. O header é fixo no topo para navegação constante, o main é flexível para diferentes tipos de conteúdo (ex.: dashboards, formulários), e o footer é minimalista com informações de rodapé. Páginas específicas como "Transações" e "Relatórios" usam um layout de grid com sidebar à esquerda (em telas grandes) para filtros e opções, enquanto o conteúdo principal ocupa a maior parte da tela.
+  
+- **Posição do Logo:** O logo do Controla+ é posicionado no canto superior esquerdo do header, com 150px de largura (ajustado para 120px em telas menores que 768px). Ele serve como link para a página inicial, garantindo fácil acesso à Home.
 
-Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo do sistema. Defina os menus padrões, entre outras coisas.
+- **Menus Padrão:** O menu principal está no header, à direita do logo, com links para "Home", "Transações", "Relatórios" e "Configurações". Cada item do menu é acompanhado por um ícone (ex.: casa para "Home", cifrão para "Transações") da biblioteca Phosphor Icons. Em dispositivos móveis, o menu colapsa em um ícone de hambúrguer, que ao clicado exibe um dropdown vertical. Páginas com sidebar (ex.: "Relatórios") têm um menu secundário à esquerda com opções como "Filtrar por Data" e "Exportar".
+
+- **Outros Elementos de Design:** 
+  - **Botões e Ações:** Botões principais (ex.: "Adicionar Transação") usam o highlight da paleta (#bcf0b4 no modo claro, #2e572d no escuro) com hover (#edf1e8/#152611), garantindo contraste e interatividade.
+  - **Tipografia:** Títulos de página (H1, 42px, Bold) são centralizados no topo do main, enquanto seções (H2, 26px, Medium) têm margem inferior de 16px para separação visual.
+  - **Responsividade:** Em telas menores que 768px, a sidebar colapsa em um menu expansível, e o grid do main ajusta-se para uma coluna única, mantendo a legibilidade.
+
+O design é funcional e focado no usuário, com uma estética limpa que reforça a confiabilidade necessária para um sistema financeiro.
 
 
 ## Paleta de Cores do Controla+
