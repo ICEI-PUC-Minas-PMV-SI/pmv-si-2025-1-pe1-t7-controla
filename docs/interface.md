@@ -49,6 +49,13 @@ A tela de despesas apresenta no lado direito registros de despesas, o usuário p
 ## Protótipos
 Esta seção apresenta os protótipos interativos das principais telas do Controla+, destacando a estrutura visual e funcional para validação de usabilidade e requisitos do sistema.
 
+### Login, Cadastro e Recuperar Senha
+
+### Login
+![Wireframe login](img/Loginprototipo.png)
+### Cadastro 
+![Wireframe login](img/Cadastroprototipo.png)
+
 ### Dashboard
 O protótipo do Dashboard exibe a Home do Controla+, com cards de "Saldo Atual" (R$ 1.400,00), "Receitas" (R$ 4.500,00) e "Despesas" (R$ 3.100,00) no topo, usando fundo #191d17 e texto #e0e4db. 
 Inclui gráficos interativos: um de pizza (65% crédito, 35% débito) e outro de linha para evolução de receitas/despesas, com filtros (Diário, Semanal, Mensal). A sidebar à esquerda tem ícones para navegação, e o logo "C+" está no topo, com dropdown de perfil à direita.
