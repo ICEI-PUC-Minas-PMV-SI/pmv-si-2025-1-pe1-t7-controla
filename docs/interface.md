@@ -76,3 +76,6 @@ Inclui gráficos interativos: um de pizza (65% crédito, 35% débito) e outro de
 
 ![Protótipo Dashboard](img/Despesas.p.png)
 
+### Categorias
+
+![Protótipo Dashboard](img/prototipo-categorias.jpg)
