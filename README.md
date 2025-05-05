@@ -10,12 +10,12 @@ Controla+ é um aplicativo de gestão financeira pessoal eficaz para resolver um
 
 ## Integrantes
 
-* Bel Antonio de Aquino e Souza
-* Luiza Trevenzoli Castor
-* Felipe Fernandes Jardim
 * Andrey Carlos Saraiva
-* Nicole Mikaely Amaral Santos
+* Bel Antonio de Aquino e Souza
+* Felipe Fernandes Jardim
 * Luiz Felipe Alves Costa
+* Luiza Trevenzoli Castor
+* Nicole Mikaely Amaral Santos
 
 
 ## Orientador
