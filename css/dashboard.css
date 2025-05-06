@@ -23,6 +23,7 @@ body {
   align-items: center;
   padding-top: 20px;
   gap: 20px;
+  font-size: 32px;
 }
 .sidebar .logo {
   font-size: 48px;
@@ -149,6 +150,14 @@ h1 {
 .dashboard-graphs .chart-controls .active {
   background: var(--highlight-color-dark-mode);
   color: var(--text-color-dark-mode);
+}
+.sidebar i.ph {
+  font-size: 32px;
+  color: var(--text-color-dark-mode);
+  line-height: 1;
+}
+.sidebar .active i.ph {
+  color: var(--surface-color-dark-mode);
 }
 @media (max-width: 900px) {
   .cards, .dashboard-graphs {
