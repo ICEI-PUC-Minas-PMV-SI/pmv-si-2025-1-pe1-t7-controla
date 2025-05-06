@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Controla+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">C+</div>
+    <button title="Adicionar">+</button>
+    <a href="#" class="active" title="Dashboard">🏠</a>
+    <a href="#" title="Transações">≡</a>
+    <a href="#" title="Transferências">⇄</a>
+    <a href="#" title="Relatórios">📈</a>
+    <a href="#" title="Gráficos">📊</a>
+    <a href="#" title="Configurações">⚙️</a>
+  </div>
+  <div class="main-content">
+    <div class="header">
+      <select class="month-select">
+        <option>Outubro</option>
+        <option>Setembro</option>
+        <option>Agosto</option>
+      </select>
+      <div class="user-info">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
+        João Oliveira
+      </div>
+    </div>
+    <h1>Dashboard</h1>
+    <div class="cards">
+      <div class="card">
+        <span class="label">Saldo Atual</span>
+        <span class="value">R$ 1.400,00</span>
+        <span class="icon">💼</span>
+      </div>
+      <div class="card">
+        <span class="label">Total de Receitas</span>
+        <span class="value">R$ 4.500,00</span>
+        <span class="icon">💲</span>
+      </div>
+      <div class="card">
+        <span class="label">Total de Despesas</span>
+        <span class="value">R$ 3.100,00</span>
+        <span class="icon">📉</span>
+      </div>
+    </div>
+    <div class="dashboard-graphs">
+      <div class="graph-card">
+        <div class="graph-title">Cartão de Crédito x Cartão Débito</div>
+        <div class="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+      <div class="graph-card">
+        <div class="graph-title">Evolução de Receitas e Despesas ao Longo do Tempo</div>
+        <div class="chart-container">
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-controls">
+          <button>Diário</button>
+          <button class="active">Semanal</button>
+          <button>Mensal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Função para obter o valor da variável CSS
+    function getCssVar(variable) {
+      return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+    }
+
+    // Cores do tema
+    const colorHighlight = getCssVar('--highlight-color-dark-mode');
+    const colorStroke = getCssVar('--stroke-color-dark-mode');
+    const colorText = getCssVar('--text-color-dark-mode');
+    const colorSurface = getCssVar('--surface-color-dark-mode');
+    const colorSurfaceHover = getCssVar('--surface-color-dark-mode-hover');
+
+    // Configuração do gráfico de pizza
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Cartão de Crédito', 'Cartão de Débito'],
+        datasets: [{
+          data: [65, 35],
+          backgroundColor: [
+            colorHighlight,
+            colorStroke
+          ],
+          borderColor: colorSurface,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: colorText,
+              font: { size: 14 }
+            }
+          }
+        }
+      }
+    });
+
+    // Configuração do gráfico de linhas
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+        datasets: [
+          {
+            label: 'Receitas',
+            data: [1200, 1900, 1500, 2100, 1800, 2400, 2000],
+            borderColor: colorStroke,
+            backgroundColor: colorStroke + '33', // 20% opacidade
+            pointBackgroundColor: colorStroke,
+            pointBorderColor: colorSurface,
+            tension: 0.4,
+            fill: true
+          },
+          {
+            label: 'Despesas',
+            data: [800, 1200, 900, 1500, 1100, 1800, 1400],
+            borderColor: colorHighlight,
+            backgroundColor: colorHighlight + '33', // 20% opacidade
+            pointBackgroundColor: colorHighlight,
+            pointBorderColor: colorSurface,
+            tension: 0.4,
+            fill: true
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: colorText,
+              font: { size: 14 }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: {
+              color: colorText + '22' // grade mais suave
+            },
+            ticks: {
+              color: colorText
+            }
+          },
+          x: {
+            grid: {
+              color: colorText + '22'
+            },
+            ticks: {
+              color: colorText
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+:root {
+  --text-color-dark-mode: #e0e4db;
+  --stroke-color-dark-mode: #a1d39a;
+  --surface-color-dark-mode: #191d17;
+  --surface-color-dark-mode-hover: #152611;
+  --highlight-color-dark-mode: #2c572d;
+}
+
+body {
+  background: var(--surface-color-dark-mode);
+  color: var(--text-color-dark-mode);
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 110px;
+  background: var(--surface-color-dark-mode-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+}
+.sidebar .logo {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.sidebar button, .sidebar a {
+  background: var(--highlight-color-dark-mode);
+  border: none;
+  border-radius: 50%;
+  width: 56px; height: 56px;
+  color: var(--text-color-dark-mode);
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sidebar .active {
+  background: var(--stroke-color-dark-mode);
+}
+.main-content {
+  margin-left: 110px;
+  padding: 40px 40px 0 40px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .user-info {
+  display: flex;
+  align-items: center;
+  background: var(--surface-color-dark-mode-hover);
+  border-radius: 24px;
+  padding: 6px 18px;
+  gap: 10px;
+}
+.header .user-info img {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+}
+.header .month-select {
+  background: var(--surface-color-dark-mode-hover);
+  color: var(--text-color-dark-mode);
+  border: none;
+  border-radius: 18px;
+  padding: 8px 24px;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+}
+h1 {
+  font-size: 48px;
+  margin: 32px 0 24px 0;
+  font-weight: bold;
+}
+.cards {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.card {
+  background: var(--surface-color-dark-mode-hover);
+  border-radius: 20px;
+  padding: 24px 32px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.card .icon {
+  font-size: 28px;
+  align-self: flex-end;
+}
+.card .label {
+  font-size: 16px;
+  color: var(--stroke-color-dark-mode);
+}
+.card .value {
+  font-size: 24px;
+  font-weight: bold;
+}
+.dashboard-graphs {
+  display: flex;
+  gap: 32px;
+}
+.dashboard-graphs .graph-card {
+  background: var(--surface-color-dark-mode-hover);
+  border-radius: 20px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-graphs .graph-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.chart-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+.dashboard-graphs .chart-controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.dashboard-graphs .chart-controls button {
+  background: var(--surface-color-dark-mode);
+  color: var(--text-color-dark-mode);
+  border: none;
+  border-radius: 12px;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+.dashboard-graphs .chart-controls .active {
+  background: var(--highlight-color-dark-mode);
+  color: var(--text-color-dark-mode);
+}
+@media (max-width: 900px) {
+  .cards, .dashboard-graphs {
+    flex-direction: column;
+  }
+}
