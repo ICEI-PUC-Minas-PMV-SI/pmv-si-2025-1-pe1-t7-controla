@@ -18,9 +18,9 @@ O diagrama de User flow abaixo apresenta o caminho percorrido pelo usuário dent
 ## Wireframes
 
 ### Login
-![Wireframe login](img/Login.png)
+![Wireframe Login](img/Login.png)
 ### Cadastro 
-![Wireframe login](img/Cadastro.png)
+![Wireframe Cadastro](img/Cadastro.png)
 ### Recuperar Senha 
 ![Wireframe Recuperacao de Senha](img/Recuperar.png).
 
@@ -48,13 +48,6 @@ A tela de despesas apresenta no lado direito registros de despesas, o usuário p
 
 ## Protótipos
 Esta seção apresenta os protótipos interativos das principais telas do Controla+, destacando a estrutura visual e funcional para validação de usabilidade e requisitos do sistema.
-
-### Login, Cadastro e Recuperar Senha
-
-### Login
-![Wireframe login](img/Loginprototipo.png)
-### Cadastro 
-![Wireframe login](img/Cadastroprototipo.png)
 
 ### Dashboard
 O protótipo do Dashboard exibe a Home do Controla+, com cards de "Saldo Atual" (R$ 1.400,00), "Receitas" (R$ 4.500,00) e "Despesas" (R$ 3.100,00) no topo, usando fundo #191d17 e texto #e0e4db. 
