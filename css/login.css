@@ -1,0 +1,227 @@
+:root {
+    --cor-principal: #355143;
+    --cor-secundaria: #7e9b8a;
+    --cor-fundo-botao: #e6efe6;
+    --cor-fundo-botao-hover: #dbe7db;
+    --cor-texto-instrucao: #5d6f61;
+    --cor-fundo: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--cor-fundo);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.logo-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 24px 0 0 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+.logo-c {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--cor-principal);
+}
+
+.logo-plus {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-left: 4px;
+}
+
+.logo-img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+}
+
+.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left h1 {
+    color: var(--cor-principal);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.right {
+    width: 400px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: var(--cor-principal);
+    font-weight: 500;
+    border-bottom: 2px solid #dbe7db;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 2px solid var(--cor-secundaria);
+    background: transparent;
+    font-size: 16px;
+    color: var(--cor-principal);
+    outline: none;
+    margin-bottom: 8px;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #00000081;
+    font-size: 18px;
+}
+
+.forgot {
+    font-size: 14px;
+    color: var(--cor-secundaria);
+    text-align: right;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px 0;
+    background: var(--cor-fundo-botao);
+    color: var(--cor-principal);
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.login-form button:hover {
+    background: var(--cor-fundo-botao-hover);
+}
+
+.arte-ilustrativa {
+    width: 95%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 32px auto 0 auto;
+    border-radius: 24px;
+    align-self: center;
+}
+
+@media (max-width: 900px) {
+    .content-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 120px;
+    }
+    .left {
+        margin-bottom: 40px;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .left h1 {
+        margin-left: 0;
+        font-size: 28px;
+        text-align: center;
+    }
+    .right {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .arte-ilustrativa {
+        max-width: 280px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 424px) {
+    .forgot {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 8px;
+        word-break: break-word;
+    }
+    .right {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+} 
