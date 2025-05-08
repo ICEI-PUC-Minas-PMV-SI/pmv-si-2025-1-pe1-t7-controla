@@ -17,12 +17,16 @@ O diagrama de User flow abaixo apresenta o caminho percorrido pelo usuário dent
 
 ## Wireframes
 
+## Login, Cadastro e Recuperacao de senha
 ### Login
+Tela inicial do sistema, onde o usuário insere suas credenciais para acessar a plataforma.
 ![Wireframe Login](img/Login.png)
-### Cadastro 
+### Cadastro
+Interface para novos usuários criarem uma conta no sistema. 
 ![Wireframe Cadastro](img/Cadastro.png)
 ### Recuperar Senha 
-![Wireframe Recuperacao de Senha](img/Recuperar.png).
+Tela simples onde o usuário insere seu e-mail para receber um link de redefinição.
+![Wireframe Recuperacao de Senha](img/Recuperar.png)
 
 ### Dashboard
 No wireframe do dashboard, elaboramos a visão inicial da Home do Controla+, estruturando uma interface que centraliza as informações financeiras mais relevantes para o usuário.
