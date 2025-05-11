@@ -1,0 +1,256 @@
+:root {
+  --text-color-dark-mode: #e0e4db;
+  --stroke-color-dark-mode: #a1d39a;
+  --surface-color-dark-mode: #191d17;
+  --surface-color-dark-mode-hover: #152611;
+  --highlight-color-dark-mode: #2c572d;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 180px 770px 1fr;
+  grid-template-rows: 140px 550px;
+  grid-template-areas: "lateral titulo titulo"
+    "lateral registro historico";
+}
+
+h1 {
+  grid-area: titulo;
+}
+
+.registro {
+  grid-area: registro;
+}
+
+.histórico {
+  grid-area: historico;
+}
+
+.sidebar {
+  grid-area: lateral;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #191d17;
+}
+
+.registro {
+  display: block;
+  width: 619px;
+  height: 500px;
+  background-color: #152611;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 50px;
+  margin-top: 25px;
+}
+
+h1 {
+  margin-left: 55px;
+  margin-top: 75px;
+  font-size: 42px;
+  font-weight: bold;
+  color: #e0e4db;
+}
+
+.histórico {
+  display: block;
+  width: 317px;
+  height: 500px;
+  background-color: #152611;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 50px;
+  margin-top: 25px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: Medium;
+  color: #e0e4db;
+}
+
+.campo {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #2c572d;
+  padding: 20px;
+  border-radius: 20px;
+  width: 376px;
+  height: 60px;
+  margin: 15px;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 200;
+  background-color: #2c572d;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+#box1 {
+  height: 37px;
+}
+
+#box2 {
+  height: 290px;
+}
+
+.label-icone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 120px;
+  color: #e0e4db;
+  font-size: 25px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #e0e4db;
+}
+
+#box2>select {
+  align-items: center;
+}
+
+select,
+input {
+  background-color: #2c572d;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  width: 200px;
+  margin: 0 auto;
+  flex: 1;
+  font-size: 16px;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #e0e4db;
+}
+
+input:hover {
+  border-bottom: 2px solid #e0e4db;
+}
+
+button {
+  border: none;
+  background-color: #2c572d;
+  border-radius: 10px;
+  width: 135px;
+  /*largura*/
+  height: 33px;
+  /*autura*/
+  margin: 10px;
+  float: right;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #e0e4db;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 110px;
+  background: var(--surface-color-dark-mode-hover);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+  font-size: 32px;
+  z-index: 10;
+}
+
+.sidebar .logo {
+  width: 83px;
+  margin-bottom: 10px;
+  height: 91px;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+.sidebar button,
+.sidebar a {
+  background: var(--highlight-color-dark-mode);
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  color: var(--text-color-dark-mode);
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebar .Despesas {
+  background: var(--stroke-color-dark-mode);
+}
+
+.sidebar .Despesas i.ph {
+  color: var(--surface-color-dark-mode);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 110px;
+    /* ainda precisa deixar espaço para a sidebar */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .registro,
+  .histórico {
+    width: 90%;
+    margin: 15px 0;
+    height: auto;
+    padding: 15px;
+  }
+
+  .campo {
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  input,
+  select {
+    width: 80%;
+    margin-top: 8px;
+  }
+
+  .container {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  button {
+    float: none;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}
