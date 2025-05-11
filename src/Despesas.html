@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Despesas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <img src="../docs/img/logo1.png" class="logo">
+            <div class="btn">
+                <button title="Adicionar">+</button>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active" title="Home"><i class="ph ph-house"></i></a>
+                <a href="#" title="Categorias"><i class="ph ph-list-bullets"></i></a>
+                <a href="#" title="Transações"><i class="ph ph-arrows-left-right"></i></a>
+                <a href="#" title="Receitas"><i class="ph ph-chart-line-up"></i></a>
+                <a href="#" class="Despesas"><i class="ph ph-chart-line-down"></i></a>
+                <a href="#" title="Configurações"><i class="ph ph-gear-six"></i></a>
+            </nav>
+        </div>
+
+
+        <h1>Registro de Despesas</h1>
+        <div class="registro">
+            <div class="campo">
+                <div class="label-icone">
+                    <label>Data</label>
+                    <div class="icone"><i class="ph ph-calendar-dots"></i></div>
+                </div>
+                <input type="text" placeholder="dd/mm/aaaa">
+            </div>
+            <div class="campo">
+                <div class="label-icone">
+                    <label>Valor</label>
+                    <div class="icone"><i class="ph ph-coins"></i></div>
+                </div>
+                <input type="text" placeholder="R$ 0,00">
+
+            </div>
+            <div class="campo">
+                <div class="label-icone">
+                    <label>Categoria</label>
+                    <div class="icone"><i class="ph ph-replit-logo"></i></div>
+                </div>
+                <select>
+                    <option>Alimentação</option>
+                    <option>Aluguel</option>
+                    <option>Água</option>
+                    <option>Bem-estar</option>
+                    <option>Educação</option>
+                    <option>Energia</option>
+                    <option>Internet</option>
+                    <option>Lazer</option>
+                    <option>Transporte</option>
+                </select>
+
+            </div>
+            <div class="campo">
+                <div class="label-icone">
+                    <label>Método de pagamento</label>
+                    <div class="icone"><i class="ph ph-cardholder"></i></div>
+                </div>
+                <select>
+                    <option>Boleto</option>
+                    <option>Cartão de crédito</option>
+                    <option>Cartão de débito</option>
+                    <option>Dinheiro</option>
+                    <option>Débito automático</option>
+                    <option>Transferência</option>
+                </select>
+
+            </div>
+            <button>Salvar</button>
+        </div>
+
+        <div class="histórico">
+            <h2>Últimas Despesas</h2>
+            <div class="container" id="box1">
+                <select>
+                    <option>Janeiro</option>
+                    <option>Fevereiro</option>
+                    <option>Março</option>
+                    <option>Abril</option>
+                    <option>Junho</option>
+                    <option>Agosto</option>
+                    <option>Setembro</option>
+                    <option>Outubro</option>
+                    <option>Novembro</option>
+                    <option>Dezembro</option>
+                </select>
+            </div>
+            <div class="container" id="box2">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
