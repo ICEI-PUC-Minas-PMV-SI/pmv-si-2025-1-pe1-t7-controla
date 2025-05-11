@@ -1,0 +1,183 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Receitas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style> body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  background: #fff;
+  color: #222;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 120px;
+  background: #F5F7F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  gap: 24px;
+  min-width: 120px;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.add-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #C4C4C4;
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.menu button {
+  background: none;
+  border: none;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu button.active, .menu button:hover {
+  background: #D1D1D1;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0;
+  min-width: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 60px 0 32px 60px;
+  line-height: 1.1;
+  align-self: flex-start;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 48px;
+  margin-left: 60px;
+}
+
+.form-section {
+  background: #F7F9F5;
+  border-radius: 28px;
+  padding: 32px 28px 28px 28px;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: #444;
+}
+.input-box {
+  background: #D7D7D7;
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #222;
+  justify-content: space-between;
+  min-width: 320px;
+}
+.save-btn {
+  margin-top: 24px;
+  background: #D7D7D7;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 32px;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: none;
+}
+
+.latest-section {
+  background: #F7F9F5;
+  border-radius: 24px;
+  padding: 28px 20px 20px 20px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.latest-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+.month-select {
+  background: #D7D7D7;
+  border-radius: 14px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 160px;
+  width: 100%;
+  box-sizing: border-box;
