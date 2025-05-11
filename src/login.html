@@ -51,7 +51,7 @@
                             var analiseUsuario = JSON.parse(usuario);
                             if(analiseUsuario.password === password){
                                 localStorage.setItem("usuario", JSON.stringify(analiseUsuario));
-                                window.location.href = "../index.html";
+                                window.location.href = "../src/dashboard.html";
                             } else {
                                 alert("E-mail ou senha incorretos.");
 

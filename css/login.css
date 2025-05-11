@@ -156,7 +156,7 @@ a {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background: url('../img/mostrar.png');
+    background: url('../docs/img/mostrar.png');
     background-size: cover;
     width: 20px;
     height: 20px;
@@ -164,7 +164,7 @@ a {
 }
 
 .toggle-password.esconder {
-    background: url('../img/ocultar.png');
+    background: url('../docs/img/ocultar.png');
     background-size: cover;   
 }
 
