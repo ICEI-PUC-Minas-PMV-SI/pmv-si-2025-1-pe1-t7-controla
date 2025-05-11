@@ -30,17 +30,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-01|  Permitir cadastro do usuário |  | 
 |RF-02|  Permitir login do usuário    |  | 
 |RF-03|  Permitir o usuário recuperar a senha |  | 
-|RF-04|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  |  | 
-|RF-05|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses |  |  
+|RF-04|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html) 
+|RF-05|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html)  
 |RF-06|  Permitir que o usuário edite as categorias. |  |
 |RF-07|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |  |
 |RF-08|  Permitir o registro dos tipos de despesa (moradia, alimentação, transporte, lazer, etc.)      |Nicole Silva|[Despesas HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/Despesas.html)
-|RF-09|  Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida      |  |
+|RF-09|  Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida      |Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html)
 
 ## Descrição das estruturas:
 
 ## Notícia
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|
+**Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
 |:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
 | Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
 | Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
