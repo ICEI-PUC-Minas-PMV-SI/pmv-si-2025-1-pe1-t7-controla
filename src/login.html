@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Conrola+  Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
@@ -20,17 +21,50 @@
             <div class="right">
                 <div class="tabs">
                     <span class="tab active">ENTRAR</span>
-                    <span class="tab">CADASTRAR</span>
+                    <span class="tab"><a href="../src/cadastro.html">CADASTRAR</a></span>
                 </div>
-                <form class="login-form">
-                    <input type="email" placeholder="Seu email" required>
+
+                <!--Formulario de Login-->
+                <form class="login-form" id="login-form">
+                    <input type="email" placeholder="Seu email" required id="email">
                     <div class="password-wrapper">
-                        <input type="password" placeholder="Senha" required>
-                        <span class="toggle-password">👁</span>
+                        <input type="password" placeholder="Senha" required id="password">
+                        <span class="toggle-password" id="icon" onclick="mostrarEsconder()"></span>
+                        
                     </div>
-                    <a href="#" class="forgot">Esqueci minha senha</a>
+                    <a href="../src/recuperar.html" class="forgot">Esqueci minha senha</a>
                     <button type="submit">ENTRAR</button>
+                    
                 </form>
+
+                <script>
+                    document
+                    .getElementById("login-form")
+                    .addEventListener("submit", function(event){
+                        event.preventDefault();
+                        var usuarioemail = document.getElementById("email").value;
+                        var password = document.getElementById("password").value;
+
+                        var usuario = localStorage.getItem(usuarioemail);
+
+                        if(usuario){
+                            var analiseUsuario = JSON.parse(usuario);
+                            if(analiseUsuario.password === password){
+                                localStorage.setItem("usuario", JSON.stringify(analiseUsuario));
+                                window.location.href = "../index.html";
+                            } else {
+                                alert("E-mail ou senha incorretos.");
+
+                            }
+                        } else {
+                            alert("Usuário não encontrado. Cadastre-se para continuar.")
+
+                        }
+
+                    })
+                
+                </script>
+                <script src="../js/script.js"></script>
             </div>
         </div>
     </div>

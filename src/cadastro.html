@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Controla+  Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
@@ -19,22 +20,55 @@
             </div>
             <div class="right">
                 <div class="tabs">
-                    <span class="tab">ENTRAR</span>
+                    <span class="tab"><a href="../src/login.html">ENTRAR</a></span>
                     <span class="tab active">CADASTRAR</span>
                 </div>
-                <form class="cadastro-form">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="email" placeholder="Email" required>
+
+                <!--Formulario de Cadastro-->
+                <form class="cadastro-form" id="cadastro-form">
+                    <input type="text" placeholder="Nome" required id="nome">
+                    <input type="email" placeholder="Email" required id="email">
                     <div class="password-wrapper">
-                        <input type="password" placeholder="Senha" required>
-                        <span class="toggle-password">👁</span>
+                        <input type="password" placeholder="Senha" required id="password">
+                        <span class="toggle-password" id="icon" onclick="mostrarEsconder()"></span>
                     </div>
                     <div class="password-wrapper">
-                        <input type="password" placeholder="Confirme a Senha" required>
-                        <span class="toggle-password">👁</span>
+                        <input type="password" placeholder="Confirme a Senha" required id="confirmPassword">
+                        <span class="toggle-passwordc" id="iconc" onclick="esconderMostrar()"></span>
                     </div>
-                    <button type="submit">ENTRAR</button>
+                    <button type="submit">CADASTRAR</button>
+                    
                 </form>
+
+                <script>
+                    document
+                    .getElementById("cadastro-form")
+                    .addEventListener("submit", function(event){
+                        event.preventDefault();
+                        var nome = document.getElementById("nome").value;
+                        var email = document.getElementById("email").value;
+                        var password = document.getElementById("password").value;
+                        var confirmPassword = 
+                            document.getElementById("confirmPassword").value;
+
+                            if (password !== confirmPassword) {
+                                alert("Senhas não coincidem. Verifique e tente novamente.");
+                                return;
+                            }
+
+                            const usuario = {
+                                nome: nome,
+                                email: email,
+                                password: password,
+                            };
+
+                            localStorage.setItem(email, JSON.stringify(usuario));
+                            alert("Cadastro realizado com sucesso. Por favor, volte à página de login.");
+                            window.location.href = "../src/login.html";
+                    })
+
+                </script>
+                <script src="../js/script.js"></script>
             </div>
         </div>
     </div>

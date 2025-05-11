@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controla+ - Bem-vindo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-area">
+            <img src="./docs/img/logo.png" alt="Logo C+" class="logo-img">
+        </div>
+        <div class="content-area">
+            <div class="left">
+                <h1>Controle suas finanças.<br>Alcance seus objetivos.</h1>
+                <img src="./docs/img/arte-ilustrativa.png" alt="Arte ilustrativa" class="arte-ilustrativa">
+            </div>
+            <div class="right">
+                <div id="bemvindoUsuario" class="welcome-message"></div>
+                <div id="welcome-buttons" class="welcome-buttons">
+                    <a href="./src/login.html" class="welcome-btn">ENTRAR</a>
+                    <a href="./src/cadastro.html" class="welcome-btn">CADASTRAR</a>
+                </div>
+                <button id="botaodesair" class="welcome-btn hidden">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var usuario = localStorage.getItem("usuario");
+        if(usuario){
+            var analiseUsuario = JSON.parse(usuario);
+            document.getElementById("bemvindoUsuario").innerHTML = `Bem Vindo, ${analiseUsuario.nome}!`;
+            document.getElementById("botaodesair").classList.remove("hidden");
+            document.getElementById("welcome-buttons").classList.add("hidden");
+        }
+        else{
+            document.getElementById("bemvindoUsuario").innerHTML = `Bem-vindo ao Controla+`;
+        }
+
+        document.getElementById("botaodesair").addEventListener("click", function(){
+            localStorage.removeItem("usuario");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>

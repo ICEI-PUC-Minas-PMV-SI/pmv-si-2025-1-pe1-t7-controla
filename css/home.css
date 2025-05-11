@@ -88,56 +88,39 @@ body {
     padding-right: 64px;
 }
 
-.recuperar-instrucao {
-    color: var(--cor-texto-instrucao);
-    font-size: 20px;
+.welcome-message {
+    font-size: 24px;
+    color: var(--cor-principal);
     text-align: center;
-    margin-bottom: 32px;
-    margin-top: 24px;
-    line-height: 1.3;
+    margin-bottom: 24px;
+    font-weight: 500;
 }
 
-.recuperar-form {
+.welcome-buttons {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     width: 100%;
-    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.recuperar-form input[type="email"] {
-    width: 100%;
-    padding: 8px 0;
-    border: none;
-    border-bottom: 2px solid var(--cor-secundaria);
-    background: transparent;
-    font-size: 16px;
-    color: var(--cor-principal);
-    outline: none;
-    margin-bottom: 8px;
-}
-
-.recuperar-form button {
-    width: 100%;
-    padding: 12px 0;
+.welcome-btn {
     background: var(--cor-fundo-botao);
     color: var(--cor-principal);
-    font-size: 18px;
-    font-weight: 500;
+    padding: 15px 30px;
     border: none;
     border-radius: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-    margin-top: 8px;
     transition: background 0.2s;
 }
 
-.recuperar-form button:hover {
+.welcome-btn:hover {
     background: var(--cor-fundo-botao-hover);
-}
-
-.forgotvolt {
-    padding-top: 20px;
-    color: var(--cor-texto-instrucao);
-    text-decoration: underline;
 }
 
 .arte-ilustrativa {
@@ -150,22 +133,22 @@ body {
     align-self: center;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .content-area {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding-top: 0;
+        justify-content: flex-start;
+        padding-top: 120px;
     }
     .left {
-        margin-bottom: 8px;
+        margin-bottom: 40px;
         margin-left: 0;
         width: 100%;
         justify-content: center;
-        align-items: center;
-        display: flex;
-        flex: unset;
     }
     .left h1 {
         margin-left: 0;
@@ -189,8 +172,5 @@ body {
     .right {
         padding-left: 8px;
         padding-right: 8px;
-    }
-    .recuperar-instrucao {
-        font-size: 16px;
     }
 } 
