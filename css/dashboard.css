@@ -94,13 +94,29 @@ h1 {
   padding: 24px 32px;
   min-width: 220px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
   flex: 1;
 }
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .card .icon {
-  font-size: 28px;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #52634F;
+}
+.card .icon i.ph {
+  font-size: 32px;
+  color: #FFF;
 }
 .card .label {
   font-size: 16px;
