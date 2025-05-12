@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controla+ - Categorias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/categorias.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../docs/img/logo.png" alt="Logo Controla+" class="logo-img">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="transacoes.html">Transações</a></li>
+                    <li><a href="categorias.html" class="active">Categorias</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <img src="../docs/img/user-avatar.png" alt="Avatar do usuário" class="avatar">
+                <span class="user-name">Nome do Usuário</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="categories-header">
+                <h1>Categorias</h1>
+                <button class="btn-add-category">+ Nova Categoria</button>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Categorias de Despesas -->
+                <section class="category-section">
+                    <h2>Despesas</h2>
+                    <div class="category-list">
+                        <div class="category-card">
+                            <div class="category-icon">🏠</div>
+                            <div class="category-info">
+                                <h3>Moradia</h3>
+                                <p>R$ 0,00</p>
+                            </div>
+                        </div>
+                        <!-- Adicione mais categorias aqui -->
+                    </div>
+                </section>
+
+                <!-- Categorias de Receitas -->
+                <section class="category-section">
+                    <h2>Receitas</h2>
+                    <div class="category-list">
+                        <div class="category-card">
+                            <div class="category-icon">💰</div>
+                            <div class="category-info">
+                                <h3>Salário</h3>
+                                <p>R$ 0,00</p>
+                            </div>
+                        </div>
+                        <!-- Adicione mais categorias aqui -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/categorias.js"></script>
+</body>
+</html> 
