@@ -69,9 +69,9 @@ body {
   border-radius: 50%;
 }
 .header .month-select {
-  background: var(--surface-color-dark-mode-hover);
+  background: var(--surface-color-dark-mode);
   color: var(--text-color-dark-mode);
-  border: none;
+  border: 1px solid var(--stroke-color-dark-mode);
   border-radius: 18px;
   padding: 8px 24px;
   font-size: 16px;
