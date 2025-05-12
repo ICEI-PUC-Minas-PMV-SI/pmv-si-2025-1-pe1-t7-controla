@@ -29,7 +29,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |------|------------------------|------------|-----------------| 
 |RF-01|  Permitir cadastro do usuário | Luiz Felipe Costa | [cadastro.html](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/cadastro.html) |
 |RF-02|  Permitir login do usuário    | Luiz Felipe Costa | [login.html](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/login.html) |
-|RF-03|  Permitir o usuário recuperar a senha |  | 
+|RF-03|  Permitir o usuário recuperar a senha | Luiz Felipe ALves | [recuperar.html](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/recuperar.html) | 
 |RF-04|  Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas  |Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html)
 |RF-05|  Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses |Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html)|  
 |RF-06|  Permitir que o usuário edite as categorias. | |
