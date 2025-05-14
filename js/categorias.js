@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Verificar se o usuário está logado
-    const usuario = localStorage.getItem('usuario');
-    if (!usuario) {
-        window.location.href = 'login.html';
-        return;
-    }
+    //const usuario = localStorage.getItem('usuario');
+    //if (!usuario) {
+    //    window.location.href = 'login.html';
+    //    return;
+    //}
 
     // Atualizar nome do usuário no header
-    const userData = JSON.parse(usuario);
-    document.querySelector('.user-name').textContent = userData.nome || 'Usuário';
+    //const userData = JSON.parse(usuario);
+    //document.querySelector('.user-name').textContent = userData.nome || 'Usuário';
 
     // Adicionar evento ao botão de nova categoria
     const btnAddCategory = document.querySelector('.btn-add-category');
