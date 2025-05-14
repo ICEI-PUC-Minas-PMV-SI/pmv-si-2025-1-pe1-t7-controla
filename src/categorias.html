@@ -33,7 +33,10 @@
             </div>
         </div>
 
-        <h1>Categorias</h1>
+        <div class="categories-header">
+            <h1>Categorias</h1>
+            <button class="btn-add-category">+ Nova Categoria</button>
+        </div>
         
         <div class="categories-grid">
             <!-- Categorias de Despesas -->
@@ -47,8 +50,8 @@
                             <p>R$ 0,00</p>
                         </div>
                         <div class="category-actions">
-                            <button class="btn-edit">✏️</button>
-                            <button class="btn-delete">🗑️</button>
+                            <button class="btn-edit" onclick="editCategory(0, 'despesas')">✏️</button>
+                            <button class="btn-delete" onclick="deleteCategory(0, 'despesas')">🗑️</button>
                         </div>
                     </div>
                 </div>
@@ -65,8 +68,8 @@
                             <p>R$ 0,00</p>
                         </div>
                         <div class="category-actions">
-                            <button class="btn-edit">✏️</button>
-                            <button class="btn-delete">🗑️</button>
+                            <button class="btn-edit" onclick="editCategory(0, 'receitas')">✏️</button>
+                            <button class="btn-delete" onclick="deleteCategory(0, 'receitas')">🗑️</button>
                         </div>
                     </div>
                 </div>

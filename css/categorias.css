@@ -88,7 +88,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+}
+
+.categories-header h1 {
+    margin: 0;
 }
 
 .btn-add-category {
@@ -100,6 +104,9 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .btn-add-category:hover {
@@ -176,7 +183,7 @@ body {
     }
 }
 
-/* Modal Styles */
+/* Modal Styles - NOVO LAYOUT */
 .modal {
     position: fixed;
     top: 0;
@@ -193,62 +200,117 @@ body {
 .modal-content {
     background: var(--surface-color-dark-mode-hover);
     border-radius: 20px;
-    padding: 32px;
+    padding: 32px 32px 24px 32px;
     width: 90%;
     max-width: 500px;
+    box-shadow: 0 4px 32px #0008;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-.modal-content h2 {
-    font-size: 24px;
-    margin-bottom: 24px;
-    color: var(--stroke-color-dark-mode);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--text-color-dark-mode);
-}
-
-.form-group input,
-.form-group select {
+.category-form-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
     width: 100%;
-    padding: 12px;
+    margin-bottom: 0;
+}
+
+.category-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 0;
+}
+
+.category-form-group label {
+    color: var(--text-color-dark-mode);
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.category-form-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--highlight-color-dark-mode);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.category-form-select,
+.category-form-input {
     background: var(--surface-color-dark-mode);
+    color: var(--text-color-dark-mode);
     border: 1px solid var(--highlight-color-dark-mode);
     border-radius: 8px;
-    color: var(--text-color-dark-mode);
+    padding: 10px 12px;
     font-size: 16px;
+    width: 100%;
+    min-width: 80px;
 }
 
-.form-buttons {
+.category-form-actions {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
     gap: 12px;
-    margin-top: 24px;
+    margin-left: auto;
 }
 
-.form-buttons button {
-    padding: 12px 24px;
+.category-form-btn-confirm {
+    background: var(--stroke-color-dark-mode);
+    color: var(--text-color-dark-mode);
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background 0.2s;
+}
+.category-form-btn-confirm:hover {
+    background: var(--highlight-color-dark-mode);
 }
 
-.form-buttons button[type="submit"] {
+.category-form-btn-cancel {
+    background: none;
+    color: var(--stroke-color-dark-mode);
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 0 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.category-form-btn-cancel:hover {
     background: var(--highlight-color-dark-mode);
     color: var(--text-color-dark-mode);
 }
 
-.form-buttons button[type="button"] {
-    background: var(--surface-color-dark-mode);
-    color: var(--text-color-dark-mode);
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 16px 4px;
+    }
+    .category-form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .category-form-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
 
 /* Category Actions */
