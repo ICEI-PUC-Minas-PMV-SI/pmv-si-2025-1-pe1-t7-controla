@@ -148,4 +148,24 @@ export function getMonthData(month) {
 export function getEvolucaoData(month, mode) {
   const data = getMonthData(month);
   return data?.evolucao?.[mode] || data?.evolucao?.semanal;
+}
+
+// Funções para acessar dados do JSON estruturado
+
+let dados = null;
+
+export async function carregarDados() {
+  if (dados) return dados;
+  const resp = await fetch('dados.json');
+  dados = await resp.json();
+  return dados;
+}
+
+export function getMesData(dados, ano, mes) {
+  return dados.anos?.[ano]?.meses?.[mes] || null;
+}
+
+export function getEvolucao(dados, ano, mes, modo) {
+  const mesData = getMesData(dados, ano, mes);
+  return mesData?.evolucao?.[modo] || { receitas: [], despesas: [], labels: [] };
 } 

@@ -1,5 +1,5 @@
 // main.js
-import { monthlyData, getEvolucaoData, getMonthData } from './data.js';
+import { carregarDados, getMesData, getEvolucao } from './data.js';
 import { createPieChart, createLineChart, updateLineChart } from './charts.js';
 import { setupMonthSelect, setupModeButtons, updateCards, populateYearSelect, populateMonthSelect, showCardAverages, showPiePercent } from './ui.js';
 
@@ -21,85 +21,67 @@ const colors = {
 };
 
 let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
 let currentMode = 'semanal';
 
-// Inicialização dos gráficos
-const pieChart = createPieChart(
-  document.getElementById('pieChart').getContext('2d'),
-  [monthlyData[currentMonth].cartoes.credito, monthlyData[currentMonth].cartoes.debito],
-  [colorHighlight, colorStroke],
-  colorSurface
-);
+let pieChart, lineChart;
 
-let lineChart = createLineChart(
-  document.getElementById('lineChart').getContext('2d'),
-  getEvolucaoData(currentMonth, currentMode),
-  colors,
-  colorSurface,
-  colorText
-);
+async function init() {
+  const dados = await carregarDados();
+  // Popular selects de ano e mês
+  const anos = Object.keys(dados.anos).map(Number);
+  populateYearSelect('yearSelect', Math.min(...anos), Math.max(...anos));
+  populateMonthSelect('monthSelect');
+  document.getElementById('yearSelect').value = currentYear;
+  document.getElementById('monthSelect').value = currentMonth;
 
-// Atualizar cards
-updateCards(getMonthData(currentMonth));
+  // Inicializar gráficos
+  const mesData = getMesData(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 }, evolucao: { semanal: { receitas: [], despesas: [], labels: [] } } };
+  pieChart = createPieChart(
+    document.getElementById('pieChart').getContext('2d'),
+    [mesData.cartoes.credito, mesData.cartoes.debito],
+    [colorHighlight, colorStroke],
+    colorSurface
+  );
+  const evol = getEvolucao(dados, currentYear, currentMonth, currentMode);
+  lineChart = createLineChart(
+    document.getElementById('lineChart').getContext('2d'),
+    evol,
+    colors,
+    colorSurface,
+    colorText
+  );
+  updateAll(dados);
 
-// Popular selects de ano e mês
-const currentYear = new Date().getFullYear();
-populateYearSelect('yearSelect', currentYear - 4, currentYear + 1);
-populateMonthSelect('monthSelect');
-
-document.getElementById('yearSelect').addEventListener('change', () => {
-  // No momento, só atualiza os gráficos/cards para o mês selecionado
-  const month = Number(document.getElementById('monthSelect').value);
-  currentMonth = month;
-  updateAll();
-});
-
-document.getElementById('monthSelect').addEventListener('change', () => {
-  const month = Number(document.getElementById('monthSelect').value);
-  if (isNaN(month) || month < 0 || month > 11) {
-    alert('Selecione um mês válido!');
-    document.getElementById('monthSelect').value = new Date().getMonth();
-    return;
-  }
-  currentMonth = month;
-  updateAll();
-});
-
-function updateAll() {
-  // Se não houver dados para o mês, mostra tudo zerado
-  const data = getMonthData(currentMonth) || {
-    saldo: 0,
-    receitas: 0,
-    despesas: 0,
-    cartoes: { credito: 0, debito: 0 },
-    evolucao: {
-      diario: { receitas: [0,0,0,0,0,0,0], despesas: [0,0,0,0,0,0,0], labels: ['01','02','03','04','05','06','07'] },
-      semanal: { receitas: [0,0,0,0,0,0,0], despesas: [0,0,0,0,0,0,0], labels: ['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'] },
-      mensal: { receitas: [0,0,0,0,0,0,0,0,0,0,0,0], despesas: [0,0,0,0,0,0,0,0,0,0,0,0], labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'] }
+  document.getElementById('yearSelect').addEventListener('change', () => {
+    currentYear = Number(document.getElementById('yearSelect').value);
+    updateAll(dados);
+  });
+  document.getElementById('monthSelect').addEventListener('change', () => {
+    const month = Number(document.getElementById('monthSelect').value);
+    if (isNaN(month) || month < 0 || month > 11) {
+      alert('Selecione um mês válido!');
+      document.getElementById('monthSelect').value = new Date().getMonth();
+      return;
     }
-  };
-  updateCards(data);
-  pieChart.data.datasets[0].data = [data.cartoes.credito, data.cartoes.debito];
-  pieChart.update();
-  updateLineChart(lineChart, getEvolucaoData(currentMonth, currentMode));
-  showCardAverages(data, currentMode);
-  showPiePercent(data.cartoes.credito, data.cartoes.debito);
+    currentMonth = month;
+    updateAll(dados);
+  });
+  setupModeButtons(mode => {
+    currentMode = mode;
+    updateAll(dados);
+  });
 }
 
-// Atualizar cards e gráficos na inicialização
-updateAll();
-
-// Eventos
-setupMonthSelect(month => {
-  currentMonth = month;
-  updateCards(getMonthData(currentMonth));
-  // Atualiza gráficos
-  pieChart.data.datasets[0].data = [monthlyData[currentMonth].cartoes.credito, monthlyData[currentMonth].cartoes.debito];
+function updateAll(dados) {
+  const mesData = getMesData(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 }, evolucao: { semanal: { receitas: [], despesas: [], labels: [] } } };
+  updateCards(mesData);
+  pieChart.data.datasets[0].data = [mesData.cartoes.credito, mesData.cartoes.debito];
   pieChart.update();
-  updateLineChart(lineChart, getEvolucaoData(currentMonth, currentMode));
-});
+  const evol = getEvolucao(dados, currentYear, currentMonth, currentMode);
+  updateLineChart(lineChart, evol);
+  showCardAverages({ evolucao: { [currentMode]: { receitas: evol.receitas, despesas: evol.despesas } } }, currentMode);
+  showPiePercent(mesData.cartoes.credito, mesData.cartoes.debito);
+}
 
-setupModeButtons(mode => {
-  currentMode = mode;
-  updateLineChart(lineChart, getEvolucaoData(currentMonth, currentMode));
-}); 
+init(); 
