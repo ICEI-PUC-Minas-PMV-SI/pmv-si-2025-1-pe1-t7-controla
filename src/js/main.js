@@ -1,7 +1,7 @@
 // main.js
 import { monthlyData, getEvolucaoData, getMonthData } from './data.js';
 import { createPieChart, createLineChart, updateLineChart } from './charts.js';
-import { setupMonthSelect, setupModeButtons, updateCards, populateYearSelect, populateMonthSelect } from './ui.js';
+import { setupMonthSelect, setupModeButtons, updateCards, populateYearSelect, populateMonthSelect, showCardAverages, showPiePercent } from './ui.js';
 
 // Função para obter o valor da variável CSS
 function getCssVar(variable) {
@@ -82,6 +82,8 @@ function updateAll() {
   pieChart.data.datasets[0].data = [data.cartoes.credito, data.cartoes.debito];
   pieChart.update();
   updateLineChart(lineChart, getEvolucaoData(currentMonth, currentMode));
+  showCardAverages(data, currentMode);
+  showPiePercent(data.cartoes.credito, data.cartoes.debito);
 }
 
 // Atualizar cards e gráficos na inicialização
