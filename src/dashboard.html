@@ -22,20 +22,31 @@
   </div>
   <div class="main-content">
     <div class="header">
-      <select class="month-select">
-        <option>Janeiro</option>
-        <option>Fevereiro</option>
-        <option>Março</option>
-        <option>Abril</option>
-        <option>Maio</option>
-        <option>Junho</option>
-        <option>Julho</option>
-        <option>Agosto</option>
-        <option>Setembro</option>
-        <option>Outubro</option>
-        <option>Novembro</option>
-        <option>Dezembro</option>
-      </select>
+      <div class="selects-container">
+        <div class="month-select-wrapper">
+          <select class="month-select" id="yearSelect">
+            <!-- Opções serão geradas via JS -->
+          </select>
+          <i class="ph ph-caret-down"></i>
+        </div>
+        <div class="month-select-wrapper">
+          <select class="month-select" id="monthSelect">
+            <option value="0">Janeiro</option>
+            <option value="1">Fevereiro</option>
+            <option value="2">Março</option>
+            <option value="3">Abril</option>
+            <option value="4">Maio</option>
+            <option value="5">Junho</option>
+            <option value="6">Julho</option>
+            <option value="7">Agosto</option>
+            <option value="8">Setembro</option>
+            <option value="9">Outubro</option>
+            <option value="10">Novembro</option>
+            <option value="11">Dezembro</option>
+          </select>
+          <i class="ph ph-caret-down"></i>
+        </div>
+      </div>
       <div class="user-info">
         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
         João Oliveira
@@ -99,9 +110,75 @@
     const colorSurface = getCssVar('--surface-color-dark-mode');
     const colorSurfaceHover = getCssVar('--surface-color-dark-mode-hover');
 
+    // Dados simulados para cada mês
+    const monthlyData = {
+      // Janeiro
+      0: {
+        saldo: 1400,
+        receitas: 4500,
+        despesas: 3100,
+        cartoes: {
+          credito: 65,
+          debito: 35
+        },
+        evolucao: {
+          receitas: [1200, 1900, 1500, 2100, 1800, 2400, 2000],
+          despesas: [800, 1200, 900, 1500, 1100, 1800, 1400]
+        }
+      },
+      // Fevereiro
+      1: {
+        saldo: 1800,
+        receitas: 5200,
+        despesas: 3400,
+        cartoes: {
+          credito: 70,
+          debito: 30
+        },
+        evolucao: {
+          receitas: [1500, 2200, 1800, 2400, 2100, 2700, 2300],
+          despesas: [1000, 1400, 1100, 1700, 1300, 2000, 1600]
+        }
+      },
+      // Março
+      2: {
+        saldo: 2200,
+        receitas: 5800,
+        despesas: 3600,
+        cartoes: {
+          credito: 75,
+          debito: 25
+        },
+        evolucao: {
+          receitas: [1800, 2500, 2100, 2700, 2400, 3000, 2600],
+          despesas: [1200, 1600, 1300, 1900, 1500, 2200, 1800]
+        }
+      }
+      // Adicione dados para os outros meses...
+    };
+
+    // Função para atualizar os cards
+    function updateCards(monthData) {
+      document.querySelector('.card:nth-child(1) .value').textContent = `R$ ${monthData.saldo.toLocaleString('pt-BR')}`;
+      document.querySelector('.card:nth-child(2) .value').textContent = `R$ ${monthData.receitas.toLocaleString('pt-BR')}`;
+      document.querySelector('.card:nth-child(3) .value').textContent = `R$ ${monthData.despesas.toLocaleString('pt-BR')}`;
+    }
+
+    // Função para atualizar os gráficos
+    function updateCharts(monthData) {
+      // Atualizar gráfico de pizza
+      pieChart.data.datasets[0].data = [monthData.cartoes.credito, monthData.cartoes.debito];
+      pieChart.update();
+
+      // Atualizar gráfico de linhas
+      lineChart.data.datasets[0].data = monthData.evolucao.receitas;
+      lineChart.data.datasets[1].data = monthData.evolucao.despesas;
+      lineChart.update();
+    }
+
     // Configuração do gráfico de pizza
     const pieCtx = document.getElementById('pieChart').getContext('2d');
-    new Chart(pieCtx, {
+    const pieChart = new Chart(pieCtx, {
       type: 'pie',
       data: {
         labels: ['Cartão de Crédito', 'Cartão de Débito'],
@@ -132,7 +209,7 @@
 
     // Configuração do gráfico de linhas
     const lineCtx = document.getElementById('lineChart').getContext('2d');
-    new Chart(lineCtx, {
+    const lineChart = new Chart(lineCtx, {
       type: 'line',
       data: {
         labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
@@ -141,7 +218,7 @@
             label: 'Receitas',
             data: [1200, 1900, 1500, 2100, 1800, 2400, 2000],
             borderColor: colorStroke,
-            backgroundColor: colorStroke + '33', // 20% opacidade
+            backgroundColor: colorStroke + '33',
             pointBackgroundColor: colorStroke,
             pointBorderColor: colorSurface,
             tension: 0.4,
@@ -151,7 +228,7 @@
             label: 'Despesas',
             data: [800, 1200, 900, 1500, 1100, 1800, 1400],
             borderColor: colorHighlight,
-            backgroundColor: colorHighlight + '33', // 20% opacidade
+            backgroundColor: colorHighlight + '33',
             pointBackgroundColor: colorHighlight,
             pointBorderColor: colorSurface,
             tension: 0.4,
@@ -175,7 +252,7 @@
           y: {
             beginAtZero: true,
             grid: {
-              color: colorText + '22' // grade mais suave
+              color: colorText + '22'
             },
             ticks: {
               color: colorText
@@ -192,6 +269,85 @@
         }
       }
     });
+
+    // Função para atualizar os meses disponíveis
+    function updateAvailableMonths(year) {
+      const monthSelect = document.getElementById('monthSelect');
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+      const currentMonth = currentDate.getMonth();
+
+      Array.from(monthSelect.options).forEach((option, index) => {
+        if (year > currentYear || (year === currentYear && index > currentMonth)) {
+          option.disabled = true;
+        } else {
+          option.disabled = false;
+        }
+      });
+
+      // Se o mês atual estiver desabilitado, seleciona o último mês disponível
+      if (monthSelect.value && monthSelect.options[monthSelect.value].disabled) {
+        const availableMonths = Array.from(monthSelect.options)
+          .filter(option => !option.disabled);
+        if (availableMonths.length > 0) {
+          monthSelect.value = availableMonths[availableMonths.length - 1].value;
+        }
+      }
+    }
+
+    // Adicionar eventos de mudança aos selects
+    document.getElementById('yearSelect').addEventListener('change', function(e) {
+      updateAvailableMonths(parseInt(e.target.value));
+      const monthData = monthlyData[document.getElementById('monthSelect').value];
+      if (monthData) {
+        updateCards(monthData);
+        updateCharts(monthData);
+      }
+    });
+
+    document.getElementById('monthSelect').addEventListener('change', function(e) {
+      const monthData = monthlyData[e.target.value];
+      if (monthData) {
+        updateCards(monthData);
+        updateCharts(monthData);
+      }
+    });
+
+    // Gerar dinamicamente os anos no select
+    const yearSelect = document.getElementById('yearSelect');
+    const currentYear = new Date().getFullYear();
+    for (let y = currentYear; y >= currentYear - 4; y--) {
+      const opt = document.createElement('option');
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
+    }
+
+    // Inicializar com o ano e mês atual
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+
+    // Selecionar o ano atual no select
+    let foundYear = false;
+    Array.from(yearSelect.options).forEach(option => {
+      if (parseInt(option.value) === currentYear) {
+        yearSelect.value = option.value;
+        foundYear = true;
+      }
+    });
+    // Se não encontrar o ano atual, seleciona o primeiro disponível
+    if (!foundYear && yearSelect.options.length > 0) {
+      yearSelect.selectedIndex = 0;
+    }
+
+    updateAvailableMonths(parseInt(yearSelect.value));
+    document.getElementById('monthSelect').value = currentMonth;
+
+    const initialData = monthlyData[currentMonth];
+    if (initialData) {
+      updateCards(initialData);
+      updateCharts(initialData);
+    }
   </script>
 </body>
 </html>

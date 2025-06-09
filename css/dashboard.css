@@ -53,10 +53,20 @@ body {
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.header .selects-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 0 auto;
 }
 .header .user-info {
+  position: absolute;
+  right: 0;
   display: flex;
   align-items: center;
   background: var(--surface-color-dark-mode-hover);
@@ -179,4 +189,43 @@ h1 {
   .cards, .dashboard-graphs {
     flex-direction: column;
   }
+}
+.month-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+}
+.month-select-wrapper:first-child {
+  width: 120px;
+}
+.month-select {
+  width: 100%;
+  font-size: 32px;
+  font-family: inherit;
+  background: var(--surface-color-dark-mode);
+  color: var(--text-color-dark-mode);
+  border: 2px solid var(--stroke-color-dark-mode);
+  border-radius: 40px;
+  padding: 8px 56px 8px 32px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.month-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.month-select-wrapper .ph-caret-down {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-color-dark-mode);
+  font-size: 24px;
 }
