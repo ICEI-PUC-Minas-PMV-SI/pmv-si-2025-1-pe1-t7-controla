@@ -56,6 +56,11 @@ document.getElementById('yearSelect').addEventListener('change', () => {
 
 document.getElementById('monthSelect').addEventListener('change', () => {
   const month = Number(document.getElementById('monthSelect').value);
+  if (isNaN(month) || month < 0 || month > 11) {
+    alert('Selecione um mês válido!');
+    document.getElementById('monthSelect').value = new Date().getMonth();
+    return;
+  }
   currentMonth = month;
   updateAll();
 });
