@@ -84,6 +84,7 @@ h2 {
   margin-bottom: 0px;
 }
 
+
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -93,14 +94,7 @@ h2 {
   padding: 20px;
   margin-bottom: 10px;
   align-items: center;
-}
-
-#box1 {
-  height: 37px;
-}
-
-#box2 {
-  height: 290px;
+  height: 370px;
 }
 
 .label-icone {
@@ -116,10 +110,6 @@ label {
   margin-bottom: 5px;
   font-size: 16px;
   color: #e0e4db;
-}
-
-#box2>select {
-  align-items: center;
 }
 
 select,
@@ -153,6 +143,10 @@ button {
   font-family: 'Inter', Arial, sans-serif;
   color: #e0e4db;
 }
+button:hover {
+  background-color: #a1d39a;
+  color: #152611;
+}
 
 .sidebar {
   position: fixed;
@@ -167,17 +161,12 @@ button {
   padding-top: 20px;
   gap: 20px;
   font-size: 32px;
-  z-index: 10;
 }
 
 .sidebar .logo {
   width: 83px;
   margin-bottom: 10px;
   height: 91px;
-}
-
-.btn {
-  margin-bottom: 20px;
 }
 
 .sidebar button,
@@ -192,7 +181,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -205,13 +194,55 @@ button {
   color: var(--surface-color-dark-mode);
 }
 
+#mensagemSucesso {
+    display: none;
+    color: #a1d39a;
+    font-size: 16px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.error {
+    color:#e0e4db;
+    font-size: 12px;
+    margin-top: 5px;
+    width: 100%;
+    display: none;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.error:not(:empty) {
+    display: block;
+}
+  
+
+#lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista li {
+    margin-bottom: 18px;
+    color: #e0e4db;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 110px;
-    /* ainda precisa deixar espaço para a sidebar */
     padding: 20px;
   }
 
@@ -252,5 +283,14 @@ button {
     float: none;
     align-self: flex-end;
     margin-top: 10px;
+  }
+
+  #mensagemSucesso {
+    font-size: 14px;
+    top: 8px;
+    width: 98%;
+    left: 1%;
+    margin-left: 50px;
+    margin-top: 15px;
   }
 }
