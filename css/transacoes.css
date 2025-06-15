@@ -87,19 +87,19 @@
         font-size: 16px;
         margin-left: 8px;
       }
-      .transactions-table-container {
+      .transacoes-table-container {
         background: var(--surface-color-dark-mode-hover);
         border-radius: 24px;
         padding: 24px;
         margin-bottom: 32px;
         overflow-x: auto;
       }
-      table.transactions-table {
+      table.transacoes-table {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0 10px;
       }
-      table.transactions-table th {
+      table.transacoes-table th {
         background: var(--stroke-color-dark-mode);
         color: var(--surface-color-dark-mode);
         padding: 12px 8px;
@@ -108,7 +108,7 @@
         font-weight: bold;
         text-align: center;
       }
-      table.transactions-table td {
+      table.transacoes-table td {
       background: var(--table-row-bg);
       color: var(--surface-color-dark-mode);
       padding: 10px 8px;
@@ -116,7 +116,7 @@
       font-size: 15px;
       vertical-align: middle;
       }
-      table.transactions-table tr:nth-child(even) td {
+      table.transacoes-table tr:nth-child(even) td {
         background: var(--table-row-bg-alt);
       }
       .actions {
@@ -138,7 +138,7 @@
       .main-content {
         padding: 20px 5px 0 120px;
       }
-      .transactions-table-container {
+      .transacoes-table-container {
         padding: 8px;
       }
     }
