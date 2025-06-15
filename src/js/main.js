@@ -1,5 +1,5 @@
 // main.js
-import { carregarDados, getMesData, getEvolucao } from './data.js';
+import { carregarDadosLocalStorage, getMesDataLocalStorage, getEvolucaoLocalStorage } from './data.js';
 import { createPieChart, createLineChart, updateLineChart } from './charts.js';
 import { setupMonthSelect, setupModeButtons, updateCards, populateYearSelect, populateMonthSelect, showCardAverages, showPiePercent } from './ui.js';
 
@@ -27,23 +27,23 @@ let currentMode = 'semanal';
 let pieChart, lineChart;
 
 async function init() {
-  const dados = await carregarDados();
+  const dados = await carregarDadosLocalStorage();
+  
   // Popular selects de ano e mês
-  const anos = Object.keys(dados.anos).map(Number);
-  populateYearSelect('yearSelect', Math.min(...anos), Math.max(...anos));
+  populateYearSelect('yearSelect', currentYear - 1, currentYear);
   populateMonthSelect('monthSelect');
   document.getElementById('yearSelect').value = currentYear;
   document.getElementById('monthSelect').value = currentMonth;
 
   // Inicializar gráficos
-  const mesData = getMesData(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 }, evolucao: { semanal: { receitas: [], despesas: [], labels: [] } } };
+  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0 };
   pieChart = createPieChart(
     document.getElementById('pieChart').getContext('2d'),
-    [mesData.cartoes.credito, mesData.cartoes.debito],
+    [mesData.cartoes?.credito || 0, mesData.cartoes?.debito || 0],
     [colorHighlight, colorStroke],
     colorSurface
   );
-  const evol = getEvolucao(dados, currentYear, currentMonth, currentMode);
+  const evol = getEvolucaoLocalStorage(dados, currentYear, currentMonth, currentMode);
   lineChart = createLineChart(
     document.getElementById('lineChart').getContext('2d'),
     evol,
@@ -74,14 +74,19 @@ async function init() {
 }
 
 function updateAll(dados) {
-  const mesData = getMesData(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 }, evolucao: { semanal: { receitas: [], despesas: [], labels: [] } } };
+  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0 };
   updateCards(mesData);
-  pieChart.data.datasets[0].data = [mesData.cartoes.credito, mesData.cartoes.debito];
-  pieChart.update();
-  const evol = getEvolucao(dados, currentYear, currentMonth, currentMode);
+  
+  // Atualizar gráfico de pizza se houver dados de cartões
+  if (mesData.cartoes) {
+    pieChart.data.datasets[0].data = [mesData.cartoes.credito || 0, mesData.cartoes.debito || 0];
+    pieChart.update();
+  }
+  
+  const evol = getEvolucaoLocalStorage(dados, currentYear, currentMonth, currentMode);
   updateLineChart(lineChart, evol);
   showCardAverages({ evolucao: { [currentMode]: { receitas: evol.receitas, despesas: evol.despesas } } }, currentMode);
-  showPiePercent(mesData.cartoes.credito, mesData.cartoes.debito);
+  showPiePercent(mesData.cartoes?.credito || 0, mesData.cartoes?.debito || 0);
 }
 
 init(); 

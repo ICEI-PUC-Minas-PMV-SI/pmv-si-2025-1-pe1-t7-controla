@@ -168,4 +168,70 @@ export function getMesData(dados, ano, mes) {
 export function getEvolucao(dados, ano, mes, modo) {
   const mesData = getMesData(dados, ano, mes);
   return mesData?.evolucao?.[modo] || { receitas: [], despesas: [], labels: [] };
+}
+
+// Módulo para trabalhar com dados do LocalStorage
+
+// Função para converter string de valor em número
+function converterValorParaNumero(valorString) {
+  return parseFloat(valorString.replace('R$ ', '').replace('.', '').replace(',', '.'));
+}
+
+// Função para obter dados do LocalStorage
+function obterDadosLocalStorage() {
+  const historicoDespesas = JSON.parse(localStorage.getItem('historicoDespesas') || '[]');
+  return historicoDespesas;
+}
+
+// Função para processar os dados do mês
+function processarDadosMes(despesas, ano, mes) {
+  const despesasDoMes = despesas.filter(despesa => {
+    const [dia, mesDespesa, anoDespesa] = despesa.data.split('/');
+    return parseInt(anoDespesa) === ano && parseInt(mesDespesa) - 1 === mes;
+  });
+
+  const totalDespesas = despesasDoMes.reduce((total, despesa) => {
+    return total + converterValorParaNumero(despesa.valor);
+  }, 0);
+
+  // Por enquanto, vamos usar valores fixos para receitas
+  // TODO: Implementar quando tivermos o registro de receitas
+  const receitas = 4500;
+  const saldo = receitas - totalDespesas;
+
+  return {
+    saldo,
+    receitas,
+    despesas: totalDespesas
+  };
+}
+
+export async function carregarDadosLocalStorage() {
+  const despesas = obterDadosLocalStorage();
+  const anoAtual = new Date().getFullYear();
+  
+  // Criar estrutura de dados similar à anterior
+  const dados = {
+    anos: {
+      [anoAtual]: {
+        meses: {}
+      }
+    }
+  };
+
+  // Processar dados para cada mês
+  for (let mes = 0; mes < 12; mes++) {
+    dados.anos[anoAtual].meses[mes] = processarDadosMes(despesas, anoAtual, mes);
+  }
+
+  return dados;
+}
+
+export function getMesDataLocalStorage(dados, ano, mes) {
+  return dados.anos?.[ano]?.meses?.[mes] || null;
+}
+
+export function getEvolucaoLocalStorage(dados, ano, mes, modo) {
+  const mesData = getMesDataLocalStorage(dados, ano, mes);
+  return mesData?.evolucao?.[modo] || { receitas: [], despesas: [], labels: [] };
 } 
