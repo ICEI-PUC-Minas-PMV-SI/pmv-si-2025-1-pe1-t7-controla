@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const despesa = {
                     data: inputData.value,
                     valor: inputValor.value,
-                    categoria: inputCategoria.value
+                    categoria: inputCategoria.value,
                     metodoPagamento: document.getElementById('metodoPagamento').value
                 };
                 salvarHistorico(despesa);
