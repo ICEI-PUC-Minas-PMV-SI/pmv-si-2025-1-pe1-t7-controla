@@ -7,11 +7,18 @@ export function setupMonthSelect(onChange) {
 }
 
 export function setupModeButtons(onModeChange) {
+  const modeMap = {
+    'diário': 'diario',
+    'semanal': 'semanal',
+    'mensal': 'mensal'
+  };
+
   document.querySelectorAll('.chart-controls button').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.chart-controls button').forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      onModeChange(this.textContent.trim().toLowerCase());
+      const mode = this.textContent.trim().toLowerCase();
+      onModeChange(modeMap[mode] || mode);
     });
   });
 }
@@ -47,7 +54,6 @@ export function populateMonthSelect(selectId) {
 }
 
 export function showCardAverages(monthData, mode) {
-  // Calcula média de receitas/despesas do modo selecionado
   const evol = monthData.evolucao?.[mode];
   if (!evol) return;
   const avgReceitas = evol.receitas.reduce((a, b) => a + b, 0) / evol.receitas.length;

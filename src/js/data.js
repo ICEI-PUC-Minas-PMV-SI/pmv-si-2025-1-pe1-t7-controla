@@ -174,7 +174,8 @@ export function getEvolucao(dados, ano, mes, modo) {
 
 // Função para converter string de valor em número
 function converterValorParaNumero(valorString) {
-  return parseFloat(valorString.replace('R$ ', '').replace('.', '').replace(',', '.'));
+  const valorLimpo = valorString.replace('R$', '').trim();
+  return parseFloat(valorLimpo.replace('.', '').replace(',', '.'));
 }
 
 // Função para obter dados do LocalStorage
@@ -183,43 +184,133 @@ function obterDadosLocalStorage() {
   return historicoDespesas;
 }
 
-// Função para processar os dados do mês
+// Função para obter o número de dias em um mês
+function getDiasNoMes(ano, mes) {
+  return new Date(ano, mes + 1, 0).getDate();
+}
+
 function processarDadosMes(despesas, ano, mes) {
+  console.log('Processando mês:', mes + 1, 'ano:', ano);
+  
   const despesasDoMes = despesas.filter(despesa => {
     const [dia, mesDespesa, anoDespesa] = despesa.data.split('/');
-    return parseInt(anoDespesa) === ano && parseInt(mesDespesa) - 1 === mes;
+    const mesCorreto = parseInt(mesDespesa) - 1 === mes;
+    const anoCorreto = parseInt(anoDespesa) === ano;
+    console.log('Despesa:', despesa.data, 'mes correto:', mesCorreto, 'ano correto:', anoCorreto);
+    return mesCorreto && anoCorreto;
   });
 
+  console.log('Despesas do mês:', despesasDoMes);
+
   const totalDespesas = despesasDoMes.reduce((total, despesa) => {
-    return total + converterValorParaNumero(despesa.valor);
+    const valor = converterValorParaNumero(despesa.valor);
+    console.log('Convertendo valor:', despesa.valor, 'para:', valor);
+    return total + valor;
   }, 0);
 
-  // Por enquanto, vamos usar valores fixos para receitas
-  // TODO: Implementar quando tivermos o registro de receitas
+  const despesasPorMetodo = despesasDoMes.reduce((acc, despesa) => {
+    const metodo = despesa.metodoPagamento;
+    if (!acc[metodo]) {
+      acc[metodo] = 0;
+    }
+    const valor = converterValorParaNumero(despesa.valor);
+    acc[metodo] += valor;
+    return acc;
+  }, {});
+
   const receitas = 4500;
   const saldo = receitas - totalDespesas;
+
+  const diasNoMes = getDiasNoMes(ano, mes);
+  console.log('Dias no mês:', diasNoMes);
+  
+  const evolucaoDiaria = {
+    receitas: Array(diasNoMes).fill(0),
+    despesas: Array(diasNoMes).fill(0),
+    labels: Array.from({length: diasNoMes}, (_, i) => (i + 1).toString().padStart(2, '0'))
+  };
+
+  const diasDaSemana = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'];
+  const evolucaoSemanal = {
+    receitas: Array(7).fill(0),
+    despesas: Array(7).fill(0),
+    labels: diasDaSemana
+  };
+
+  despesasDoMes.forEach(despesa => {
+    const [dia, mesDespesa, anoDespesa] = despesa.data.split('/');
+    const valor = converterValorParaNumero(despesa.valor);
+    
+    const diaIndex = parseInt(dia) - 1;
+    console.log('Processando dia:', dia, 'índice:', diaIndex, 'valor:', valor);
+    
+    if (diaIndex >= 0 && diaIndex < diasNoMes) {
+      evolucaoDiaria.despesas[diaIndex] += valor;
+      console.log('Despesa adicionada ao dia', dia, 'novo valor:', evolucaoDiaria.despesas[diaIndex]);
+    } else {
+      console.log('ERRO: Índice do dia fora do intervalo:', diaIndex, 'dias no mês:', diasNoMes);
+    }
+
+    const data = new Date(parseInt(anoDespesa), parseInt(mesDespesa) - 1, parseInt(dia));
+    const diaSemana = data.getDay();
+    const indiceSemana = diaSemana === 0 ? 6 : diaSemana - 1;
+    evolucaoSemanal.despesas[indiceSemana] += valor;
+  });
+
+  console.log('Evolução diária final:', evolucaoDiaria);
 
   return {
     saldo,
     receitas,
-    despesas: totalDespesas
+    despesas: totalDespesas,
+    cartoes: {
+      credito: despesasPorMetodo['Cartão de crédito'] || 0,
+      debito: despesasPorMetodo['Cartão de débito'] || 0
+    },
+    evolucao: {
+      diario: evolucaoDiaria,
+      semanal: evolucaoSemanal
+    }
   };
+}
+
+function processarDadosMensais(despesas, ano) {
+  const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+  const evolucaoMensal = {
+    receitas: Array(12).fill(0),
+    despesas: Array(12).fill(0),
+    labels: meses
+  };
+
+  const despesasDoAno = despesas.filter(despesa => {
+    const [_, __, anoDespesa] = despesa.data.split('/');
+    return parseInt(anoDespesa) === ano;
+  });
+
+  despesasDoAno.forEach(despesa => {
+    const [_, mesDespesa, __] = despesa.data.split('/');
+    const mesIndex = parseInt(mesDespesa) - 1;
+    evolucaoMensal.despesas[mesIndex] += converterValorParaNumero(despesa.valor);
+  });
+
+  return evolucaoMensal;
 }
 
 export async function carregarDadosLocalStorage() {
   const despesas = obterDadosLocalStorage();
+  console.log('Todas as despesas:', despesas);
+  
   const anoAtual = new Date().getFullYear();
   
-  // Criar estrutura de dados similar à anterior
   const dados = {
     anos: {
       [anoAtual]: {
-        meses: {}
+        meses: {},
+        evolucaoMensal: processarDadosMensais(despesas, anoAtual)
       }
     }
   };
 
-  // Processar dados para cada mês
   for (let mes = 0; mes < 12; mes++) {
     dados.anos[anoAtual].meses[mes] = processarDadosMes(despesas, anoAtual, mes);
   }
@@ -232,6 +323,13 @@ export function getMesDataLocalStorage(dados, ano, mes) {
 }
 
 export function getEvolucaoLocalStorage(dados, ano, mes, modo) {
+  if (modo === 'mensal') {
+    return dados.anos?.[ano]?.evolucaoMensal || { receitas: [], despesas: [], labels: [] };
+  }
   const mesData = getMesDataLocalStorage(dados, ano, mes);
-  return mesData?.evolucao?.[modo] || { receitas: [], despesas: [], labels: [] };
+  console.log('Dados do mês para evolução:', mesData);
+  console.log('Modo:', modo);
+  const evolucao = mesData?.evolucao?.[modo] || { receitas: [], despesas: [], labels: [] };
+  console.log('Evolução retornada:', evolucao);
+  return evolucao;
 } 
