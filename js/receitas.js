@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     data: inputData.value,
                     valor: inputValor.value,
                     categoria: inputCategoria.value,
-                    metodoRecebimento: document.getElementById('metodoRecemento').value
+                    metodoRecebimento: document.getElementById('metodoRecebimento').value
                 };
                 salvarHistorico(receita);
                 renderizarHistorico();
