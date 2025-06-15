@@ -149,50 +149,38 @@ button:hover {
 }
 
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 110px;
-  background: var(--surface-color-dark-mode-hover);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  gap: 20px;
-  font-size: 32px;
-}
-
-.sidebar .logo {
-  width: 83px;
-  margin-bottom: 10px;
-  height: 91px;
-}
-
-.sidebar button,
-.sidebar a {
-  background: var(--highlight-color-dark-mode);
-  border: none;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  color: var(--text-color-dark-mode);
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 25px;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.sidebar .Despesas {
-  background: var(--stroke-color-dark-mode);
-}
-
-.sidebar .Despesas i.ph {
-  color: var(--surface-color-dark-mode);
-}
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: 110px;
+    background: var(--surface-color-dark-mode-hover);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .sidebar .logo {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .sidebar button, .sidebar a {
+    background: var(--highlight-color-dark-mode);
+    border: none;
+    border-radius: 50%;
+    width: 56px; height: 56px;
+    color: var(--text-color-dark-mode);
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sidebar .active {
+    background: var(--stroke-color-dark-mode);
+  }
 
 #mensagemSucesso {
     display: none;
