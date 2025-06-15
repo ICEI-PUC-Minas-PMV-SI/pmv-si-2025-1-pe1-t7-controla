@@ -211,13 +211,13 @@ button:hover {
 }
   
 
-#lista {
+#listaR {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#lista li {
+#listaR li {
     margin-bottom: 18px;
     color: #e0e4db;
     font-size: 16px;

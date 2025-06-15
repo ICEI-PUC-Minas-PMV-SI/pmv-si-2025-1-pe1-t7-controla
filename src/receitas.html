@@ -16,13 +16,13 @@
         <h1>Registro de Receitas</h1>
         <div class="registro" id="Reg">
             <div id="mensagemSucesso"></div>
-            <form id="formDespesa">
+            <form id="formReceitas">
                 <div class="campo">
                     <div class="label-icone">
                         <label>Data</label>
                         <div class="icone"><i class="ph ph-calendar-dots"></i></div>
                     </div>
-                    <input type="text" id="data" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
+                    <input type="text" id="dataR" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
                     <div class="error" id="erroData"></div>
                 </div>
                 <div class="campo">
@@ -30,7 +30,7 @@
                         <label>Valor</label>
                         <div class="icone"><i class="ph ph-coins"></i></div>
                     </div>
-                    <input type="text" id="valor" placeholder="R$ 0,00" autocomplete="off">
+                    <input type="text" id="valorR" placeholder="R$ 0,00" autocomplete="off">
                     <div class="error" id="erroValor"></div>
                 </div>
                 <div class="campo">
@@ -38,31 +38,27 @@
                         <label>Categoria</label>
                         <div class="icone"><i class="ph ph-replit-logo"></i></div>
                     </div>
-                    <select id="categoria">
-                        <option>Alimentação</option>
-                        <option>Aluguel</option>
-                        <option>Água</option>
-                        <option>Bem-estar</option>
-                        <option>Educação</option>
-                        <option>Energia</option>
-                        <option>Internet</option>
-                        <option>Lazer</option>
-                        <option>Transporte</option>
+                    <select id="categoriaR">
+                        <option>Salário</option>
+                        <option>Investimento</option>
+                        <option>Pensão</option>
+                        <option>Bonificação</option>
                     </select>
 
                 </div>
                 <div class="campo">
                     <div class="label-icone">
-                        <label>Método de pagamento</label>
+                        <label>Método de recebimento</label>
                         <div class="icone"><i class="ph ph-cardholder"></i></div>
                     </div>
-                    <select id="metodoPagamento">
+                    <select id="metodoRecebimento">
                         <option>Boleto</option>
                         <option>Cartão de crédito</option>
                         <option>Cartão de débito</option>
                         <option>Dinheiro</option>
-                        <option>Débito automático</option>
+                        <option>Criptoativos</option>
                         <option>Transferência</option>
+                        <option>Cheque</option>
                     </select>
 
                 </div>
@@ -71,15 +67,15 @@
         </div>
 
         <div class="histórico">
-            <h2>Últimas Despesas</h2>
+            <h2>Últimas Receitas</h2>
             <div class="container" id="box2">
-                <ul id="lista"></ul>
+                <ul id="listaR"></ul>
             </div>
         </div>
     </div>
 
 
 </body>
-<script src=""></script>
+<script src="../js/receitas.js"></script>
 
 </html>
