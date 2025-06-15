@@ -36,7 +36,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |RF-07|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |  |
 |RF-08|  Permitir o registro de despesas com a descrição de data, valor, categoria, método de pagamento, histórico.       |Nicole Silva|[Despesas HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/Despesas.html)
 |RF-09|  Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida      |Felipe Jardim  |[Dashboard HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/c01862698fb31de45d2325039bebe215a1d70e9a/src/dashboard.html)
-|RF-10|  Permitir que o usuário registre todas as transações realizadas durante o período do mês.      |Luiza Trevenzoli |[Transacoes HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/transactions.html)
+|RF-10|  Permitir que o usuário registre todas as transações realizadas durante o período do mês.      |Luiza Trevenzoli |[Transacoes HTML](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/src/transacoes.html)
 
 
 ## Descrição das estruturas:
