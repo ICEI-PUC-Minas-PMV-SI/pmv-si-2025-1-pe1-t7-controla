@@ -16,13 +16,13 @@
         <h1>Registro de Receitas</h1>
         <div class="registro" id="Reg">
             <div id="mensagemSucesso"></div>
-            <form id="formDespesa">
+            <form id="formReceitas">
                 <div class="campo">
                     <div class="label-icone">
                         <label>Data</label>
                         <div class="icone"><i class="ph ph-calendar-dots"></i></div>
                     </div>
-                    <input type="text" id="data" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
+                    <input type="text" id="dataR" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
                     <div class="error" id="erroData"></div>
                 </div>
                 <div class="campo">
@@ -30,7 +30,7 @@
                         <label>Valor</label>
                         <div class="icone"><i class="ph ph-coins"></i></div>
                     </div>
-                    <input type="text" id="valor" placeholder="R$ 0,00" autocomplete="off">
+                    <input type="text" id="valorR" placeholder="R$ 0,00" autocomplete="off">
                     <div class="error" id="erroValor"></div>
                 </div>
                 <div class="campo">
@@ -38,7 +38,7 @@
                         <label>Categoria</label>
                         <div class="icone"><i class="ph ph-replit-logo"></i></div>
                     </div>
-                    <select id="categoria">
+                    <select id="categoriaR">
                         <option>Alimentação</option>
                         <option>Aluguel</option>
                         <option>Água</option>
@@ -73,13 +73,13 @@
         <div class="histórico">
             <h2>Últimas Despesas</h2>
             <div class="container" id="box2">
-                <ul id="lista"></ul>
+                <ul id="listaR"></ul>
             </div>
         </div>
     </div>
 
 
 </body>
-<script src=""></script>
+<script src="../js/receitas.js"></script>
 
 </html>
