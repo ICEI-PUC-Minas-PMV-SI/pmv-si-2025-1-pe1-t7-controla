@@ -181,7 +181,8 @@ function converterValorParaNumero(valorString) {
 // Função para obter dados do LocalStorage
 function obterDadosLocalStorage() {
   const historicoDespesas = JSON.parse(localStorage.getItem('historicoDespesas') || '[]');
-  return historicoDespesas;
+  const historicoReceitas = JSON.parse(localStorage.getItem('historicoReceitas') || '[]');
+  return { historicoDespesas, historicoReceitas };
 }
 
 // Função para obter o número de dias em um mês
@@ -189,10 +190,10 @@ function getDiasNoMes(ano, mes) {
   return new Date(ano, mes + 1, 0).getDate();
 }
 
-function processarDadosMes(despesas, ano, mes) {
+function processarDadosMes(dados, ano, mes) {
   console.log('Processando mês:', mes + 1, 'ano:', ano);
   
-  const despesasDoMes = despesas.filter(despesa => {
+  const despesasDoMes = dados.historicoDespesas.filter(despesa => {
     const [dia, mesDespesa, anoDespesa] = despesa.data.split('/');
     const mesCorreto = parseInt(mesDespesa) - 1 === mes;
     const anoCorreto = parseInt(anoDespesa) === ano;
@@ -200,11 +201,26 @@ function processarDadosMes(despesas, ano, mes) {
     return mesCorreto && anoCorreto;
   });
 
+  const receitasDoMes = dados.historicoReceitas.filter(receita => {
+    const [dia, mesReceita, anoReceita] = receita.data.split('/');
+    const mesCorreto = parseInt(mesReceita) - 1 === mes;
+    const anoCorreto = parseInt(anoReceita) === ano;
+    console.log('Receita:', receita.data, 'mes correto:', mesCorreto, 'ano correto:', anoCorreto);
+    return mesCorreto && anoCorreto;
+  });
+
   console.log('Despesas do mês:', despesasDoMes);
+  console.log('Receitas do mês:', receitasDoMes);
 
   const totalDespesas = despesasDoMes.reduce((total, despesa) => {
     const valor = converterValorParaNumero(despesa.valor);
-    console.log('Convertendo valor:', despesa.valor, 'para:', valor);
+    console.log('Convertendo valor despesa:', despesa.valor, 'para:', valor);
+    return total + valor;
+  }, 0);
+
+  const totalReceitas = receitasDoMes.reduce((total, receita) => {
+    const valor = converterValorParaNumero(receita.valor);
+    console.log('Convertendo valor receita:', receita.valor, 'para:', valor);
     return total + valor;
   }, 0);
 
@@ -218,8 +234,7 @@ function processarDadosMes(despesas, ano, mes) {
     return acc;
   }, {});
 
-  const receitas = 4500;
-  const saldo = receitas - totalDespesas;
+  const saldo = totalReceitas - totalDespesas;
 
   const diasNoMes = getDiasNoMes(ano, mes);
   console.log('Dias no mês:', diasNoMes);
@@ -237,12 +252,13 @@ function processarDadosMes(despesas, ano, mes) {
     labels: diasDaSemana
   };
 
+  // Processar despesas diárias
   despesasDoMes.forEach(despesa => {
     const [dia, mesDespesa, anoDespesa] = despesa.data.split('/');
     const valor = converterValorParaNumero(despesa.valor);
     
     const diaIndex = parseInt(dia) - 1;
-    console.log('Processando dia:', dia, 'índice:', diaIndex, 'valor:', valor);
+    console.log('Processando despesa dia:', dia, 'índice:', diaIndex, 'valor:', valor);
     
     if (diaIndex >= 0 && diaIndex < diasNoMes) {
       evolucaoDiaria.despesas[diaIndex] += valor;
@@ -257,11 +273,32 @@ function processarDadosMes(despesas, ano, mes) {
     evolucaoSemanal.despesas[indiceSemana] += valor;
   });
 
+  // Processar receitas diárias
+  receitasDoMes.forEach(receita => {
+    const [dia, mesReceita, anoReceita] = receita.data.split('/');
+    const valor = converterValorParaNumero(receita.valor);
+    
+    const diaIndex = parseInt(dia) - 1;
+    console.log('Processando receita dia:', dia, 'índice:', diaIndex, 'valor:', valor);
+    
+    if (diaIndex >= 0 && diaIndex < diasNoMes) {
+      evolucaoDiaria.receitas[diaIndex] += valor;
+      console.log('Receita adicionada ao dia', dia, 'novo valor:', evolucaoDiaria.receitas[diaIndex]);
+    } else {
+      console.log('ERRO: Índice do dia fora do intervalo:', diaIndex, 'dias no mês:', diasNoMes);
+    }
+
+    const data = new Date(parseInt(anoReceita), parseInt(mesReceita) - 1, parseInt(dia));
+    const diaSemana = data.getDay();
+    const indiceSemana = diaSemana === 0 ? 6 : diaSemana - 1;
+    evolucaoSemanal.receitas[indiceSemana] += valor;
+  });
+
   console.log('Evolução diária final:', evolucaoDiaria);
 
   return {
     saldo,
-    receitas,
+    receitas: totalReceitas,
     despesas: totalDespesas,
     cartoes: {
       credito: despesasPorMetodo['Cartão de crédito'] || 0,
@@ -274,7 +311,7 @@ function processarDadosMes(despesas, ano, mes) {
   };
 }
 
-function processarDadosMensais(despesas, ano) {
+function processarDadosMensais(dados, ano) {
   const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
   const evolucaoMensal = {
     receitas: Array(12).fill(0),
@@ -282,9 +319,14 @@ function processarDadosMensais(despesas, ano) {
     labels: meses
   };
 
-  const despesasDoAno = despesas.filter(despesa => {
+  const despesasDoAno = dados.historicoDespesas.filter(despesa => {
     const [_, __, anoDespesa] = despesa.data.split('/');
     return parseInt(anoDespesa) === ano;
+  });
+
+  const receitasDoAno = dados.historicoReceitas.filter(receita => {
+    const [_, __, anoReceita] = receita.data.split('/');
+    return parseInt(anoReceita) === ano;
   });
 
   despesasDoAno.forEach(despesa => {
@@ -293,29 +335,36 @@ function processarDadosMensais(despesas, ano) {
     evolucaoMensal.despesas[mesIndex] += converterValorParaNumero(despesa.valor);
   });
 
+  receitasDoAno.forEach(receita => {
+    const [_, mesReceita, __] = receita.data.split('/');
+    const mesIndex = parseInt(mesReceita) - 1;
+    evolucaoMensal.receitas[mesIndex] += converterValorParaNumero(receita.valor);
+  });
+
   return evolucaoMensal;
 }
 
 export async function carregarDadosLocalStorage() {
-  const despesas = obterDadosLocalStorage();
-  console.log('Todas as despesas:', despesas);
+  const dados = obterDadosLocalStorage();
+  console.log('Todas as despesas:', dados.historicoDespesas);
+  console.log('Todas as receitas:', dados.historicoReceitas);
   
   const anoAtual = new Date().getFullYear();
   
-  const dados = {
+  const dadosProcessados = {
     anos: {
       [anoAtual]: {
         meses: {},
-        evolucaoMensal: processarDadosMensais(despesas, anoAtual)
+        evolucaoMensal: processarDadosMensais(dados, anoAtual)
       }
     }
   };
 
   for (let mes = 0; mes < 12; mes++) {
-    dados.anos[anoAtual].meses[mes] = processarDadosMes(despesas, anoAtual, mes);
+    dadosProcessados.anos[anoAtual].meses[mes] = processarDadosMes(dados, anoAtual, mes);
   }
 
-  return dados;
+  return dadosProcessados;
 }
 
 export function getMesDataLocalStorage(dados, ano, mes) {
