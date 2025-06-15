@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });function salvarTransacoes() {
-  const linhas = document.querySelectorAll(".transactions-table tbody tr");
+  const linhas = document.querySelectorAll(".transacoes-table tbody tr");
   const transacoes = [];
 
   linhas.forEach((linha) => {
