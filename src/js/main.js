@@ -30,13 +30,15 @@ async function init() {
   const dados = await carregarDadosLocalStorage();
   
   // Popular selects de ano e mês
-  populateYearSelect('yearSelect', currentYear - 1, currentYear);
+  const anosDisponiveis = Object.keys(dados.anos).map(Number).sort((a, b) => b - a);
+  currentYear = anosDisponiveis.length > 0 ? Math.max(...anosDisponiveis) : new Date().getFullYear();
+  populateYearSelect('yearSelect', anosDisponiveis);
   populateMonthSelect('monthSelect');
   document.getElementById('yearSelect').value = currentYear;
   document.getElementById('monthSelect').value = currentMonth;
 
   // Inicializar gráficos
-  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0 };
+  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 } };
   pieChart = createPieChart(
     document.getElementById('pieChart').getContext('2d'),
     [mesData.cartoes?.credito || 0, mesData.cartoes?.debito || 0],
@@ -74,7 +76,7 @@ async function init() {
 }
 
 function updateAll(dados) {
-  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0 };
+  const mesData = getMesDataLocalStorage(dados, currentYear, currentMonth) || { saldo: 0, receitas: 0, despesas: 0, cartoes: { credito: 0, debito: 0 } };
   updateCards(mesData);
   
   // Atualizar gráfico de pizza se houver dados de cartões
