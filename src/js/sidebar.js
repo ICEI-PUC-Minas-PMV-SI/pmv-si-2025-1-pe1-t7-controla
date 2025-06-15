@@ -1,7 +1,6 @@
 document.write(`
   <div class="sidebar">
-    <div class="logo">C+</div>
-    <button title="Adicionar">+</button>
+    <img src="../docs/img/logo1.png" class="logo">
     <a href="dashboard.html" title="Home"><i class="ph ph-house"></i></a>
     <a href="categorias.html" title="Categorias"><i class="ph ph-list-bullets"></i></a>
     <a href="transacoes.html" title="Transações"><i class="ph ph-arrows-left-right"></i></a>
