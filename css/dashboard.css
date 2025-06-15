@@ -26,9 +26,9 @@ body {
   font-size: 32px;
 }
 .sidebar .logo {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 30px;
+  width: 83px;
+  margin-bottom: 10px;
+  height: 91px;
 }
 .sidebar button, .sidebar a {
   background: var(--highlight-color-dark-mode);
