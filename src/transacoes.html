@@ -8,36 +8,44 @@
   <link rel="stylesheet" href="../css/transacoes.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="js/sidebar.js"></script>
+  <script src="../js/transacoes.js"></script>
 </head>
 <body>
   <div class="main-content">
     <div class="header">
-      <div class="user-info">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
-        João Oliveira
+      <div class="top-bar">
+        <div class="month-select-container">
+          <select class="year-select">
+            <option>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+          </select>
+          <select class="month-select">
+            <option>Janeiro</option>
+            <option>Fevereiro</option>
+            <option>Março</option>
+            <option>Abril</option>
+            <option>Maio</option>
+            <option>Junho</option>
+            <option>Julho</option>
+            <option>Agosto</option>
+            <option>Setembro</option>
+            <option>Outubro</option>
+            <option>Novembro</option>
+            <option>Dezembro</option>
+          </select>
+        </div>
+        <div class="user-info">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
+          João Oliveira
+        </div>
       </div>
-    </div>
-    <div class="month-select-container">
-      <select class="month-select">
-        <option>Janeiro</option>
-        <option>Fevereiro</option>
-        <option>Março</option>
-        <option>Abril</option>
-        <option>Maio</option>
-        <option>Junho</option>
-        <option>Julho</option>
-        <option>Agosto</option>
-        <option>Setembro</option>
-        <option>Outubro</option>
-        <option>Novembro</option>
-        <option>Dezembro</option>
-      </select>
     </div>
     <div class="transacoes-table-container">
       <table class="transacoes-table">
         <thead>
           <tr>
-            <th>Controla</th>
+            <th>Situação</th>
             <th>Data</th>
             <th>Valor</th>
             <th>Categoria</th>
