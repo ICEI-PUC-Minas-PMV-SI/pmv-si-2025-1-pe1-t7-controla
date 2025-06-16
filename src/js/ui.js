@@ -7,11 +7,18 @@ export function setupMonthSelect(onChange) {
 }
 
 export function setupModeButtons(onModeChange) {
+  const modeMap = {
+    'diário': 'diario',
+    'semanal': 'semanal',
+    'mensal': 'mensal'
+  };
+
   document.querySelectorAll('.chart-controls button').forEach(btn => {
     btn.addEventListener('click', function() {
       document.querySelectorAll('.chart-controls button').forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      onModeChange(this.textContent.trim().toLowerCase());
+      const mode = this.textContent.trim().toLowerCase();
+      onModeChange(modeMap[mode] || mode);
     });
   });
 }
@@ -22,16 +29,16 @@ export function updateCards(monthData) {
   document.querySelector('.card:nth-child(3) .value').textContent = `R$ ${monthData.despesas.toLocaleString('pt-BR')}`;
 }
 
-export function populateYearSelect(selectId, minYear, maxYear) {
+export function populateYearSelect(selectId, years) {
   const select = document.getElementById(selectId);
   select.innerHTML = '';
-  for (let y = maxYear; y >= minYear; y--) {
+  years.forEach(year => {
     const opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
+    opt.value = year;
+    opt.textContent = year;
     select.appendChild(opt);
-  }
-  select.value = maxYear;
+  });
+  select.value = years.length > 0 ? Math.max(...years) : new Date().getFullYear();
 }
 
 export function populateMonthSelect(selectId) {
@@ -47,7 +54,6 @@ export function populateMonthSelect(selectId) {
 }
 
 export function showCardAverages(monthData, mode) {
-  // Calcula média de receitas/despesas do modo selecionado
   const evol = monthData.evolucao?.[mode];
   if (!evol) return;
   const avgReceitas = evol.receitas.reduce((a, b) => a + b, 0) / evol.receitas.length;

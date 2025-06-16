@@ -1,5 +1,5 @@
 // charts.js
-import { getEvolucaoData } from './data.js';
+import { getEvolucaoLocalStorage } from './data.js';
 
 export function createPieChart(ctx, data, colors, colorSurface) {
   return new Chart(ctx, {
