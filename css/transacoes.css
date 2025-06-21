@@ -119,8 +119,8 @@ table.transacoes-table {
 
 table.transacoes-table th {
     background: var(--stroke-color-dark-mode);
-    padding: 12px 8px;
     color: var(--text-color-dark-mode);
+    padding: 16px 10px;
     border-radius: 8px 8px 0 0;
     font-size: 16px;
     font-weight: bold;
@@ -129,19 +129,20 @@ table.transacoes-table th {
 
 table.transacoes-table td {
     background: var(--table-row-bg);
-    padding: 10px 8px;
     color: var(--text-color-dark-mode);
+    padding: 8px 6px;
     border-radius: 8px;
     font-size: 15px;
     vertical-align: middle;
     text-align: center;
-    height: 40px;
+    height: 35px;
     box-sizing: border-box;
 }
 
 table.transacoes-table tr:nth-child(even) td {
     background: var(--table-row-bg-alt);
 }
+
 table.transacoes-table input.editable {
     background: transparent;
     border: none;
@@ -159,12 +160,12 @@ table.transacoes-table input.editable:focus {
 }
 
 .actions {
-    display: inline-flex; /* Mudança para inline-flex para se comportar como texto */
+    display: inline-flex;
     gap: 8px;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
+    padding: 10px 8px;
+    margin: 10px 0 10px 0;
     box-sizing: border-box;
 }
 
@@ -176,7 +177,7 @@ table.transacoes-table input.editable:focus {
     color: var(--text-color-dark-mode);
     padding: 0;
     margin: 0;
-    line-height: 1;
+    line-height: 5px;
     width: 32px;
     min-width: 32px;
     display: flex;
@@ -211,21 +212,6 @@ table.transacoes-table input.editable:focus {
     text-align: center;
 }
 .transacoes-table tr:nth-child(even) td select {
-    background: var(--table-row-bg-alt);
-}
-
-.transacoes-table td.actions {
-    background: var(--table-row-bg);
-    color: var(--surface-color-dark-mode);
-    padding: 10px 8px;
-    border-radius: 8px;
-    font-size: 15px;
-    vertical-align: middle;
-    text-align: center;
-    height: 60px;
-    box-sizing: border-box;
-}
-.transacoes-table tr:nth-child(even) td.actions {
     background: var(--table-row-bg-alt);
 }
 
