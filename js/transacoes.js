@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const row = button.closest("tr"); // acha a linha inteira
       const cells = row.querySelectorAll("td");
-      // Edita apenas as 3 primeiras colunas (Data, Valor, Categoria)
-      for (let i = 0; i < 3; i++) {
         const cell = cells[i];
         if (!cell.querySelector("input") && cell.querySelector("select") === null) {
           const currentText = cell.innerText;
