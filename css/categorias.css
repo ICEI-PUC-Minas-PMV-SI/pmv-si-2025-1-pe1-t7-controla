@@ -398,4 +398,10 @@ h1 {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-} 
+}
+
+.logout-btn {
+  background: none; border: none; cursor: pointer; color: var(--text-color-dark-mode);
+  font-size: 1.5rem; padding: 0 0 0 8px; display: flex; align-items: center;
+}
+.logout-btn:hover { color: var(--stroke-color-dark-mode); } 
