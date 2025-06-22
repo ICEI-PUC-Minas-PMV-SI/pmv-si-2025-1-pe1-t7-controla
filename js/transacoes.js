@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const row = button.closest("tr"); // acha a linha inteira
       const cells = row.querySelectorAll("td");
+      // Edita as 4 primeiras colunas (Data, Valor, Categoria, Método da Transação)
+      for (let i = 0; i < 4; i++) {
         const cell = cells[i];
         if (!cell.querySelector("input") && cell.querySelector("select") === null) {
           const currentText = cell.innerText;
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
           input.type = "text";
           input.value = currentText;
           input.classList.add("editable");
-          cell.innerHTML = ""; // limpa a célula
+          cell.innerHTML = "";
           cell.appendChild(input);
         }
       }
@@ -60,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const row = button.closest("tr");
       const cells = row.querySelectorAll("td");
-      // Salva apenas as 3 primeiras colunas editáveis
-      for (let i = 0; i < 3; i++) {
+      // Salva as 4 primeiras colunas editáveis
+      for (let i = 0; i < 4; i++) {
         const cell = cells[i];
         const input = cell.querySelector("input");
         if (input) {
@@ -100,7 +102,7 @@ function attachEventListenersToRow(row) {
   if (editBtn) {
     editBtn.addEventListener("click", () => {
       const cells = row.querySelectorAll("td");
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 4; i++) {
         const cell = cells[i];
         if (!cell.querySelector("input") && cell.querySelector("select") === null) {
           const currentText = cell.innerText;
@@ -130,7 +132,7 @@ function attachEventListenersToRow(row) {
   if (saveBtn) {
     saveBtn.addEventListener("click", () => {
       const cells = row.querySelectorAll("td");
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 4; i++) {
         const cell = cells[i];
         const input = cell.querySelector("input");
         if (input) {
@@ -153,7 +155,7 @@ function salvarTransacoes() {
       const data = cells[0].innerText;
       const valor = cells[1].innerText;
       const categoria = cells[2].querySelector("select")?.value || cells[2].innerText;
-      const metodoTransacao = cells[3].querySelector("select")?.value || cells[3].innerText;
+      const metodoTransacao = cells[3].innerText;
 
       transacoes.push({ 
         data, 

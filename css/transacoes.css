@@ -1,223 +1,223 @@
 :root {
-  --text-color-dark-mode: #e0e4db;
-  --stroke-color-dark-mode: #2c572d;
-  --surface-color-dark-mode: #191d17;
-  --surface-color-dark-mode-hover: #152611;
-  --highlight-color-dark-mode: #2c572d;
-  --table-header-bg: #3a5c3a;
-  --table-row-bg: #2c572d;
-  --table-row-bg-alt: #2c572d;
-}
-body {
-  background: var(--surface-color-dark-mode);
-  color: var(--text-color-dark-mode);
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-.sidebar {
-    position: fixed;
-    left: 0; top: 0; bottom: 0;
-    width: 110px;
-    background: var(--surface-color-dark-mode-hover);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    gap: 20px;
-}
-.sidebar .logo {
-    width: 83px;
-    margin-bottom: 10px;
-    height: 91px;
-}
-.sidebar button, .sidebar a {
-    background: var(--highlight-color-dark-mode);
-    border: none;
-    border-radius: 50%;
-    width: 56px; height: 56px;
+    --text-color-dark-mode: #e0e4db;
+    --stroke-color-dark-mode: #2c572d;
+    --surface-color-dark-mode: #191d17;
+    --surface-color-dark-mode-hover: #152611;
+    --highlight-color-dark-mode: #2c572d;
+    --table-header-bg: #3a5c3a;
+    --table-row-bg: #2c572d;
+    --table-row-bg-alt: #2c572d;
+  }
+  body {
+    background: var(--surface-color-dark-mode);
     color: var(--text-color-dark-mode);
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-.sidebar .active {
-    background: var(--stroke-color-dark-mode);
-}
-.main-content {
-    margin-left: 110px;
-    padding: 40px 8px 0 40px;
-    min-height: 100vh;
-}
-.header {
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-}
-.header .user-info {
-    display: flex;
-    align-items: center;
-    background: var(--surface-color-dark-mode-hover);
-    border-radius: 24px;
-    padding: 6px 18px;
-    gap: 10px;
-}
-.header .user-info img {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-}
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 24px;
-    margin-top: 0;
-    position: relative;
-}
-.user-info {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.month-select-container {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.month-select, .year-select {
-    background: var(--surface-color-dark-mode-hover);
-    color: var(--text-color-dark-mode);
-    border: 2px solid #98c792;
-    border-radius: 18px;
-    padding: 8px 24px;
-    font-size: 16px;
-}
-.transacoes-table-container {
-    background: var(--surface-color-dark-mode-hover);
-    border-radius: 24px;
-    padding: 24px;
-    margin-bottom: 32px;
-    overflow-x: auto;
-    min-height: 220px;
-}
-
-table.transacoes-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-}
-
-table.transacoes-table th {
-    background: var(--stroke-color-dark-mode);
-    color: var(--text-color-dark-mode);
-    padding: 16px 10px;
-    border-radius: 8px 8px 0 0;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
-
-table.transacoes-table td {
-    background: var(--table-row-bg);
-    color: var(--text-color-dark-mode);
-    padding: 8px 6px;
-    border-radius: 8px;
-    font-size: 15px;
-    vertical-align: middle;
-    text-align: center;
-    height: 35px;
-    box-sizing: border-box;
-}
-
-table.transacoes-table tr:nth-child(even) td {
-    background: var(--table-row-bg-alt);
-}
-
-table.transacoes-table input.editable {
-    background: transparent;
-    border: none;
-    color: var(--text-color-dark-mode);
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px 8px;
-    box-sizing: border-box;
-}
-
-table.transacoes-table input.editable:focus {
-    outline: 2px solid var(--text-color-dark-mode:);
-    border-radius: 4px;
-}
-
-.actions {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 8px;
-    margin: 10px 0 10px 0;
-    box-sizing: border-box;
-}
-
-.actions button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--text-color-dark-mode);
-    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
-    line-height: 5px;
-    width: 32px;
-    min-width: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.actions button:hover {
-  color: var(--highlight-color-dark-mode);
-}
-@media (max-width: 900px) {
+    padding: 0;
+    text-align: center;
+  }
+  .sidebar {
+      position: fixed;
+      left: 0; top: 0; bottom: 0;
+      width: 110px;
+      background: var(--surface-color-dark-mode-hover);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      gap: 20px;
+  }
+  .sidebar .logo {
+      width: 83px;
+      margin-bottom: 10px;
+      height: 91px;
+  }
+  .sidebar button, .sidebar a {
+      background: var(--highlight-color-dark-mode);
+      border: none;
+      border-radius: 50%;
+      width: 56px; height: 56px;
+      color: var(--text-color-dark-mode);
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  .sidebar .active {
+      background: var(--stroke-color-dark-mode);
+  }
   .main-content {
-    padding: 20px 5px 0 120px;
+      margin-left: 110px;
+      padding: 40px 8px 0 40px;
+      min-height: 100vh;
+  }
+  .header {
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+  }
+  .header .user-info {
+      display: flex;
+      align-items: center;
+      background: var(--surface-color-dark-mode-hover);
+      border-radius: 24px;
+      padding: 6px 18px;
+      gap: 10px;
+  }
+  .header .user-info img {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+  }
+  .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 24px;
+      margin-top: 0;
+      position: relative;
+  }
+  .user-info {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+  }
+  .month-select-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .month-select, .year-select {
+      background: var(--surface-color-dark-mode-hover);
+      color: var(--text-color-dark-mode);
+      border: 2px solid #98c792;
+      border-radius: 18px;
+      padding: 8px 24px;
+      font-size: 16px;
   }
   .transacoes-table-container {
-    padding: 8px;
+      background: var(--surface-color-dark-mode-hover);
+      border-radius: 24px;
+      padding: 24px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+      min-height: 220px;
   }
-}
-
-.transacoes-table td select {
-    background: var(--table-row-bg);
-    color: var(--text-color-dark-mode);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 8px;
-    font-size: 15px;
-    box-sizing: border-box;
-    height: 40%;
-    vertical-align: middle;
-    text-align: center;
-}
-.transacoes-table tr:nth-child(even) td select {
-    background: var(--table-row-bg-alt);
-}
-
-.transacoes-table th:last-child,
-.transacoes-table td.actions {
-    width: 160px;
-    min-width: 160px;
-    max-width: 160px;
-}
+  
+  table.transacoes-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+  }
+  
+  table.transacoes-table th {
+      background: var(--stroke-color-dark-mode);
+      color: var(--text-color-dark-mode);
+      padding: 16px 10px;
+      border-radius: 8px 8px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  table.transacoes-table td {
+      background: var(--table-row-bg);
+      color: var(--text-color-dark-mode);
+      padding: 8px 6px;
+      border-radius: 8px;
+      font-size: 15px;
+      vertical-align: middle;
+      text-align: center;
+      height: 35px;
+      box-sizing: border-box;
+  }
+  
+  table.transacoes-table tr:nth-child(even) td {
+      background: var(--table-row-bg-alt);
+  }
+  
+  table.transacoes-table input.editable {
+      background: transparent;
+      border: none;
+      color: var(--text-color-dark-mode);
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px 8px;
+      box-sizing: border-box;
+  }
+  
+  table.transacoes-table input.editable:focus {
+      outline: 2px solid var(--text-color-dark-mode);
+      border-radius: 4px;
+  }
+  
+  .actions {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 8px;
+      margin: 10px 0 10px 0;
+      box-sizing: border-box;
+  }
+  
+  .actions button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--text-color-dark-mode);
+      padding: 0;
+      margin: 0;
+      line-height: 5px;
+      width: 32px;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      box-sizing: border-box;
+  }
+  
+  .actions button:hover {
+    color: var(--highlight-color-dark-mode);
+  }
+  @media (max-width: 900px) {
+    .main-content {
+      padding: 20px 5px 0 120px;
+    }
+    .transacoes-table-container {
+      padding: 8px;
+    }
+  }
+  
+  .transacoes-table td select {
+      background: var(--table-row-bg);
+      color: var(--text-color-dark-mode);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 8px;
+      font-size: 15px;
+      box-sizing: border-box;
+      height: 40%;
+      vertical-align: middle;
+      text-align: center;
+  }
+  .transacoes-table tr:nth-child(even) td select {
+      background: var(--table-row-bg-alt);
+  }
+  
+  .transacoes-table th:last-child,
+  .transacoes-table td.actions {
+      width: 160px;
+      min-width: 160px;
+      max-width: 160px;
+  }
