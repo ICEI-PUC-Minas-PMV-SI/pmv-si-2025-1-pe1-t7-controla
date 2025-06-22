@@ -188,8 +188,70 @@
   }
   
   .actions button:hover {
-    color: var(--highlight-color-dark-mode);
+    color: var(--text-color-dark-mode);
   }
+
+  /* Estilos para diferenciar receitas e despesas */
+  .transacao-receita {
+    border-left: 4px solid #4CAF50 !important;
+  }
+  
+  .transacao-despesa {
+    border-left: 4px solid #f44336 !important;
+  }
+  
+  .transacao-receita .valor {
+    color: #4CAF50 !important;
+    font-weight: bold;
+  }
+  
+  .transacao-despesa .valor {
+    color: #f44336 !important;
+    font-weight: bold;
+  }
+
+  /* Estilos para o resumo das transações */
+  .resumo-transacoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--surface-color-dark-mode-hover);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 24px;
+    gap: 20px;
+  }
+  
+  .resumo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .resumo-label {
+    font-size: 14px;
+    color: var(--text-color-dark-mode);
+    opacity: 0.8;
+  }
+  
+  .resumo-valor {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .resumo-valor.receita {
+    color: #4CAF50;
+  }
+  
+  .resumo-valor.despesa {
+    color: #f44336;
+  }
+  
+  .resumo-valor.saldo {
+    color: var(--text-color-dark-mode);
+  }
+
   @media (max-width: 900px) {
     .main-content {
       padding: 20px 5px 0 120px;
@@ -200,17 +262,25 @@
   }
   
   .transacoes-table td select {
-      background: var(--table-row-bg);
+      background: transparent;
       color: var(--text-color-dark-mode);
       border: none;
-      border-radius: 8px;
-      padding: 10px 8px;
+      width: 100%;
+      height: 100%;
       font-size: 15px;
       box-sizing: border-box;
-      height: 40%;
       vertical-align: middle;
       text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
   }
+  
+  .transacoes-table td select option {
+    background: var(--table-row-bg);
+    color: var(--text-color-dark-mode);
+  }
+  
   .transacoes-table tr:nth-child(even) td select {
       background: var(--table-row-bg-alt);
   }
