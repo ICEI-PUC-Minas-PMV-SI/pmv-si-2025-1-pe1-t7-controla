@@ -1,29 +1,8 @@
 # Testes
 
-Neste projeto serão realizados dois tipos de testes:
-
- - O **Teste de Software**, que utiliza uma abordadem de caixa preta, e tem por objetivo verificar a conformidade do software com os requisitos funcionais e não funcionais do sistema.
- - O **Teste de Usabilidade**, que busca avaliar a qualidade do uso do sistema por um usuário do público alvo. 
-
-Se quiser conhecer um pouco mais sobre os tipos de teste de software, leia o documento [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/).
-
-A documentação dos testes é dividida nas seguintes seções:
-
- - [Plano de Testes de Software](#plano-de-testes-de-software)
- - [Registro dos Testes de Software](#registro-dos-testes-de-software)
- - [Avaliação dos Testes de Software](#avaliação-dos-testes-de-software)
- - [Cenários de Teste de Usabilidade](#cenários-de-teste-de-usabilidade)
- - [Registro dos Testes de Usabilidade](#registro-dos-testes-de-usabilidade)
- - [Avaliação dos Testes de Usabilidade](#avaliação-dos-testes-de-usabilidade)
-
 # Teste de Software
 
-Nesta seção o grupo deverá documentar os testes de software que verificam a correta implementação dos requisitos funcionais e não funcionais do software.
-
 ## Plano de Testes de Software
-
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
-
 
 **Caso de Teste** | **CT01 - Criar conta parte 1**
  :--------------: | ------------
@@ -147,8 +126,6 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 ## Registro dos Testes de Software
 
-Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
-
 |*Caso de Teste*                                 |*CT01 - Cadastro*                                         |
 |---|---|
 |Requisito Associado | RF-01 - Permitir cadastro do usuário|
@@ -218,10 +195,6 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 ## Avaliação dos Testes de Software
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
-
-## Testes de unidade automatizados (Opcional)
-
-Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de software, ele podera desenvolver testes automatizados de software que verificam o funcionamento das funções JavaScript desenvolvidas. Para conhecer sobre testes unitários em JavaScript, leia 0 documento  [Ferramentas de Teste para Java Script](https://geekflare.com/javascript-unit-testing/).
 
 # Testes de Usabilidade
 
