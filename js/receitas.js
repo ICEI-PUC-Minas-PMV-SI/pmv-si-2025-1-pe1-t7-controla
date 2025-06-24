@@ -165,4 +165,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     renderizarHistorico();
+
+    function carregarCategoriasLocalStorage() {
+        const categorias = JSON.parse(localStorage.getItem('categorias')) || { despesas: [], receitas: [] };
+        return categorias;
+    }
+
+    function popularSelectCategorias(selectElement, tipo) {
+        const categorias = carregarCategoriasLocalStorage();
+        selectElement.innerHTML = '';
+        categorias[tipo].forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat.nome;
+            option.textContent = `${cat.icone} ${cat.nome}`;
+            selectElement.appendChild(option);
+        });
+    }
+
+    if (inputCategoria) {
+        popularSelectCategorias(inputCategoria, 'receitas');
+    }
 });

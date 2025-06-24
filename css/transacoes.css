@@ -1,237 +1,299 @@
 :root {
-  --text-color-dark-mode: #e0e4db;
-  --stroke-color-dark-mode: #a1d39a;
-  --surface-color-dark-mode: #191d17;
-  --surface-color-dark-mode-hover: #152611;
-  --highlight-color-dark-mode: #2c572d;
-  --table-header-bg: #3a5c3a;
-  --table-row-bg: #a1d39a;
-  --table-row-bg-alt: #b6e2b6;
-}
-body {
-  background: var(--surface-color-dark-mode);
-  color: var(--text-color-dark-mode);
-  font-family: 'Inter', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-.sidebar {
-    position: fixed;
-    left: 0; top: 0; bottom: 0;
-    width: 110px;
+    --text-color-dark-mode: #e0e4db;
+    --stroke-color-dark-mode: #2c572d;
+    --surface-color-dark-mode: #191d17;
+    --surface-color-dark-mode-hover: #152611;
+    --highlight-color-dark-mode: #2c572d;
+    --table-header-bg: #3a5c3a;
+    --table-row-bg: #2c572d;
+    --table-row-bg-alt: #2c572d;
+  }
+  body {
+    background: var(--surface-color-dark-mode);
+    color: var(--text-color-dark-mode);
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .sidebar {
+      position: fixed;
+      left: 0; top: 0; bottom: 0;
+      width: 110px;
+      background: var(--surface-color-dark-mode-hover);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      gap: 20px;
+  }
+  .sidebar .logo {
+      width: 83px;
+      margin-bottom: 10px;
+      height: 91px;
+  }
+  .sidebar button, .sidebar a {
+      background: var(--highlight-color-dark-mode);
+      border: none;
+      border-radius: 50%;
+      width: 56px; height: 56px;
+      color: var(--text-color-dark-mode);
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  .sidebar .active {
+      background: var(--stroke-color-dark-mode);
+  }
+  .main-content {
+      margin-left: 110px;
+      padding: 40px 8px 0 40px;
+      min-height: 100vh;
+  }
+  .header {
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+  }
+  .header .user-info {
+      display: flex;
+      align-items: center;
+      background: var(--surface-color-dark-mode-hover);
+      border-radius: 24px;
+      padding: 6px 18px;
+      gap: 10px;
+  }
+  .header .user-info img {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+  }
+  .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 24px;
+      margin-top: 0;
+      position: relative;
+  }
+  .user-info {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+  }
+  .month-select-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .month-select, .year-select {
+      background: var(--surface-color-dark-mode-hover);
+      color: var(--text-color-dark-mode);
+      border: 2px solid #98c792;
+      border-radius: 18px;
+      padding: 8px 24px;
+      font-size: 16px;
+  }
+  .transacoes-table-container {
+      background: var(--surface-color-dark-mode-hover);
+      border-radius: 24px;
+      padding: 24px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+      min-height: 220px;
+  }
+  
+  table.transacoes-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+  }
+  
+  table.transacoes-table th {
+      background: var(--stroke-color-dark-mode);
+      color: var(--text-color-dark-mode);
+      padding: 16px 10px;
+      border-radius: 8px 8px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  table.transacoes-table td {
+      background: var(--table-row-bg);
+      color: var(--text-color-dark-mode);
+      padding: 8px 6px;
+      border-radius: 8px;
+      font-size: 15px;
+      vertical-align: middle;
+      text-align: center;
+      height: 35px;
+      box-sizing: border-box;
+  }
+  
+  table.transacoes-table tr:nth-child(even) td {
+      background: var(--table-row-bg-alt);
+  }
+  
+  table.transacoes-table input.editable {
+      background: transparent;
+      border: none;
+      color: var(--text-color-dark-mode);
+      width: 100%;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px 8px;
+      box-sizing: border-box;
+  }
+  
+  table.transacoes-table input.editable:focus {
+      outline: 2px solid var(--text-color-dark-mode);
+      border-radius: 4px;
+  }
+  
+  .actions {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 8px;
+      margin: 10px 0 10px 0;
+      box-sizing: border-box;
+  }
+  
+  .actions button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: var(--text-color-dark-mode);
+      padding: 0;
+      margin: 0;
+      line-height: 5px;
+      width: 32px;
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      box-sizing: border-box;
+  }
+  
+  .actions button:hover {
+    color: var(--text-color-dark-mode);
+  }
+
+  /* Estilos para diferenciar receitas e despesas */
+  .transacao-receita {
+    border-left: 4px solid #4CAF50 !important;
+  }
+  
+  .transacao-despesa {
+    border-left: 4px solid #f44336 !important;
+  }
+  
+  .transacao-receita .valor {
+    color: #4CAF50 !important;
+    font-weight: bold;
+  }
+  
+  .transacao-despesa .valor {
+    color: #f44336 !important;
+    font-weight: bold;
+  }
+
+  /* Estilos para o resumo das transações */
+  .resumo-transacoes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background: var(--surface-color-dark-mode-hover);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 24px;
+    gap: 20px;
+  }
+  
+  .resumo-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    gap: 20px;
-}
-.sidebar .logo {
-    width: 83px;
-    margin-bottom: 10px;
-    height: 91px;
-}
-.sidebar button, .sidebar a {
-    background: var(--highlight-color-dark-mode);
-    border: none;
-    border-radius: 50%;
-    width: 56px; height: 56px;
-    color: var(--text-color-dark-mode);
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-.sidebar .active {
-    background: var(--stroke-color-dark-mode);
-}
-.main-content {
-    margin-left: 110px;
-    padding: 40px 8px 0 40px;
-    min-height: 100vh;
-}
-.header {
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-}
-.header .user-info {
-    display: flex;
-    align-items: center;
-    background: var(--surface-color-dark-mode-hover);
-    border-radius: 24px;
-    padding: 6px 18px;
-    gap: 10px;
-}
-.header .user-info img {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-}
-.top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 24px;
-    margin-top: 0;
-    position: relative;
-}
-.user-info {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.month-select-container {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.month-select, .year-select {
-    background: var(--surface-color-dark-mode-hover);
-    color: var(--text-color-dark-mode);
-    border: 2px solid #98c792;
-    border-radius: 18px;
-    padding: 8px 24px;
-    font-size: 16px;
-}
-.transacoes-table-container {
-    background: var(--surface-color-dark-mode-hover);
-    border-radius: 24px;
-    padding: 24px;
-    margin-bottom: 32px;
-    overflow-x: auto;
-    min-height: 220px;
-}
-
-table.transacoes-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 10px;
-}
-
-table.transacoes-table th {
-    background: var(--stroke-color-dark-mode);
-    color: var(--surface-color-dark-mode);
-    padding: 12px 8px;
-    border-radius: 8px 8px 0 0;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
-
-table.transacoes-table td {
-    background: var(--table-row-bg);
-    color: var(--surface-color-dark-mode);
-    padding: 10px 8px;
-    border-radius: 8px;
-    font-size: 15px;
-    vertical-align: middle;
-    text-align: center;
-    height: 40px;
-    box-sizing: border-box;
-}
-
-table.transacoes-table tr:nth-child(even) td {
-    background: var(--table-row-bg-alt);
-}
-table.transacoes-table input.editable {
-    background: transparent;
-    border: none;
-    color: var(--surface-color-dark-mode);
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px 8px;
-    box-sizing: border-box;
-}
-
-table.transacoes-table input.editable:focus {
-    outline: 2px solid var(--stroke-color-dark-mode);
-    border-radius: 4px;
-}
-
-.actions {
-    display: inline-flex; /* Mudança para inline-flex para se comportar como texto */
     gap: 8px;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.actions button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--surface-color-dark-mode);
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-    width: 32px;
-    min-width: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-.actions button:hover {
-  color: var(--highlight-color-dark-mode);
-}
-@media (max-width: 900px) {
-  .main-content {
-    padding: 20px 5px 0 120px;
   }
-  .transacoes-table-container {
-    padding: 8px;
+  
+  .resumo-label {
+    font-size: 14px;
+    color: var(--text-color-dark-mode);
+    opacity: 0.8;
   }
-}
+  
+  .resumo-valor {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .resumo-valor.receita {
+    color: #4CAF50;
+  }
+  
+  .resumo-valor.despesa {
+    color: #f44336;
+  }
+  
+  .resumo-valor.saldo {
+    color: var(--text-color-dark-mode);
+  }
 
-.transacoes-table td select {
+  @media (max-width: 900px) {
+    .main-content {
+      padding: 20px 5px 0 120px;
+    }
+    .transacoes-table-container {
+      padding: 8px;
+    }
+  }
+  
+  .transacoes-table td select {
+      background: transparent;
+      color: var(--text-color-dark-mode);
+      border: none;
+      width: 100%;
+      height: 100%;
+      font-size: 15px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  
+  .transacoes-table td select option {
     background: var(--table-row-bg);
-    color: var(--surface-color-dark-mode);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 8px;
-    font-size: 15px;
-    box-sizing: border-box;
-    height: 40%;
-    vertical-align: middle;
-    text-align: center;
+    color: var(--text-color-dark-mode);
+  }
+  
+  .transacoes-table tr:nth-child(even) td select {
+      background: var(--table-row-bg-alt);
+  }
+  
+  .transacoes-table th:last-child,
+  .transacoes-table td.actions {
+      width: 160px;
+      min-width: 160px;
+      max-width: 160px;
+  }
+  
+.logout-btn {
+  background: none; border: none; cursor: pointer; color: var(--text-color-dark-mode);
+  font-size: 1.5rem; padding: 0 0 0 8px; display: flex; align-items: center;
 }
-.transacoes-table tr:nth-child(even) td select {
-    background: var(--table-row-bg-alt);
-}
-
-.transacoes-table td.actions {
-    background: var(--table-row-bg);
-    color: var(--surface-color-dark-mode);
-    padding: 10px 8px;
-    border-radius: 8px;
-    font-size: 15px;
-    vertical-align: middle;
-    text-align: center;
-    height: 60px;
-    box-sizing: border-box;
-}
-.transacoes-table tr:nth-child(even) td.actions {
-    background: var(--table-row-bg-alt);
-}
-
-.transacoes-table th:last-child,
-.transacoes-table td.actions {
-    width: 160px;
-    min-width: 160px;
-    max-width: 160px;
-}
+.logout-btn:hover { color: var(--stroke-color-dark-mode); }
