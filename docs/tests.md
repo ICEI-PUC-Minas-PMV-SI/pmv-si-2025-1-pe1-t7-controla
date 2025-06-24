@@ -41,6 +41,110 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
+**Caso de Teste** | **CT01 - Cadastro**
+ :--------------: | ------------
+**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Cadastrar" <br> 
+**Requisitos associados** | RF-01
+**Resultado esperado** | Usuário cadastrado
+**Dados de entrada** | Nome, Email, Senha, Confirmação de senha
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT02 - Login**
+ :--------------: | ------------
+**Procedimento**  | 1) Preencha todos os campos do formulário <br> 2) Clique no botão "Entrar" <br> 
+**Requisitos associados** | RF-02
+**Resultado esperado** | Acesso ao aplicativo logado na conta informada
+**Dados de entrada** | Email e Senha
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT03 - Recuperar senha**
+ :--------------: | ------------
+**Procedimento**  | 1) Clique na opção "Entrar" <br> 2) Clique em "Esqueci minha senha" <br> 3) Informe o email usado no cadastro <br> 4) Abra o email <br> 5) Redefinir a senha <br>
+**Requisitos associados** | RF-03
+**Resultado esperado** | Senha redefinida
+**Dados de entrada** | Email
+**Resultado obtido** | Fracasso
+
+**Caso de Teste** | **CT04 - Gráfico de cartões**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de dashboard <br>
+**Requisitos associados** | RF-04
+**Resultado esperado** | Exibir um gráfico que compara o uso do cartão de crédito com o cartão de débito
+**Dados de entrada** | Inserção de dados na tela de despesas
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT05 - Gráfico de receitas e despesas**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de dashboard <br> 
+**Requisitos associados** | RF-05
+**Resultado esperado** | Exibir um gráfico que compara a evolução de Receitas e Despesas ao Longo do Tempo contendo filtros temporais
+**Dados de entrada** | Inserção de dados na tela de Receitas e Despesas
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT06 - Edição de categorias**
+ :--------------: | ------------
+**Procedimento**  | 1) <br> 
+**Requisitos associados** | RF-00
+**Resultado esperado** | 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT07 - Registro de Receitas**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de Receitas <br> 2) Preencha todos os campos do formulário de forma valida <br> 3) Clique no botão "Salvar" <br> 
+**Requisitos associados** | RF-07
+**Resultado esperado** | Informações salvas, <br> Aviso que as informações foram salvas, <br> Exibição de um pequeno histórico que atualiza sempre que uma nova receita é adicionada
+**Dados de entrada** | Data, Valor, Categoria e Método de recebimento
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT08 - Registro de Despesas**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de Despesas <br> 2) Preencha todos os campos do formulário de forma valida <br> 3) Clique no botão "Salvar"<br> 
+**Requisitos associados** | RF-08
+**Resultado esperado** | Informações salvas, <br> Aviso que as informações foram salvas, <br> Exibição de um pequeno histórico que atualiza sempre que uma nova despesa é adicionada
+**Dados de entrada** | Data, Valor, Categoria e Método de pagamento
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT09 - Apresentar um dashboard**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de dashboard <br> 
+**Requisitos associados** | RF-09
+**Resultado esperado** | Exibir o SALDO ATUAL, TOTAL DE RECEITAS, TOTAL DE DESPESAS contendo filtros temporais
+**Dados de entrada** | Inserção de dados na tela de Receitas e Despesas
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT10 - Responsividade**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir o site em diferentes tipos de telas <br> 
+**Requisitos associados** | RF-10
+**Resultado esperado** | Site se adapta para diferentes tipos de telas
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT11 - Velocidade**
+ :--------------: | ------------
+**Procedimento**  | 1) Testar o tempo de resposta <br> 
+**Requisitos associados** | RNF-01
+**Resultado esperado** | Processo de requisições do usuário em no máximo 3s.
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT12 - Proteção de dados**
+ :--------------: | ------------
+**Procedimento**  | 1) Verificar a fonte de todos os elementos utilizados <br> 
+**Requisitos associados** | RNF-02
+**Resultado esperado** | Estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis.
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso
+
+**Caso de Teste** | **CT13 - Transações**
+ :--------------: | ------------
+**Procedimento**  | 1) Abrir a tela de Transações <br> 2) Clicar no ícone desejado <br>
+**Requisitos associados** | RF-10
+**Resultado esperado** | Permitir que o usuário veja, edite ou delete todas as transações realizadas durante o período do mês.
+**Dados de entrada** | Data, Valor, Categoria, Método de transações, Ações
+**Resultado obtido** | Sucesso
+
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
@@ -75,17 +179,17 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |Requisito Associado | RF-06 - Permitir que o usuário edite as categorias.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
-|*Caso de Teste*                                 |*CT07 - Edição de categorias*                                        |
+|*Caso de Teste*                                 |*CT07 - Registro de Receitas*                                        |
 |---|---|
 |Requisito Associado | RF-07 - Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc).|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
-|*Caso de Teste*                                 |*CT08 - Edição de categorias*                                        |
+|*Caso de Teste*                                 |*CT08 - Registro de Despesas*                                        |
 |---|---|
 |Requisito Associado | RF-08 - Permitir o registro de despesas com a descrição de data, valor, categoria, método de pagamento, histórico.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
-|*Caso de Teste*                                 |*CT09 - Edição de categorias*                                        |
+|*Caso de Teste*                                 |*CT09 - Apresentar um dashboard*                                        |
 |---|---|
 |Requisito Associado | RF-09 - Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
@@ -105,9 +209,9 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |Requisito Associado | RNF-03 - Estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
-|*Caso de Teste*                                 |*CT13 - Adaptar a diferentes tamanhos de tela*                                        |
+|*Caso de Teste*                                 |*CT13 - Transações*                                        |
 |---|---|
-|Requisito Associado | RNF-04 - Deve se adaptar a diferentes tamanhos de tela e resoluções.|
+|Requisito Associado | RF-10 - Permitir que o usuário veja, edite ou delete todas as transações realizadas durante o período do mês.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
 
