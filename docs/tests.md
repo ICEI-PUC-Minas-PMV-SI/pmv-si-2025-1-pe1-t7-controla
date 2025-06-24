@@ -45,15 +45,70 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
 
-|*Caso de Teste*                                 |*CT01 - Criar conta parte 1*                                         |
+|*Caso de Teste*                                 |*CT01 - Cadastro*                                         |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
+|Requisito Associado | RF-01 - Permitir cadastro do usuário|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
 
-|*Caso de Teste*                                 |*CT02 - Criar conta parte 2*                                        |
+|*Caso de Teste*                                 |*CT02 - Login*                                        |
 |---|---|
-|Requisito Associado | RF-001 - A aplicação deve permitir que os usuários criem uma conta e gerenciem seu cadastro|
+|Requisito Associado | RF-02 - Permitir login do usuário|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+
+|*Caso de Teste*                                 |*CT03 - Recuperar senha*                                        |
+|---|---|
+|Requisito Associado | RF-03 - Permitir o usuário recuperar a senha|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT04 - Gráfico de cartões*                                        |
+|---|---|
+|Requisito Associado | RF-04 - Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT05 - Gráfico de receitas e despesas*                                        |
+|---|---|
+|Requisito Associado | RF-05 - Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT06 - Edição de categorias*                                        |
+|---|---|
+|Requisito Associado | RF-06 - Permitir que o usuário edite as categorias.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT07 - Edição de categorias*                                        |
+|---|---|
+|Requisito Associado | RF-07 - Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc).|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT08 - Edição de categorias*                                        |
+|---|---|
+|Requisito Associado | RF-08 - Permitir o registro de despesas com a descrição de data, valor, categoria, método de pagamento, histórico.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT09 - Edição de categorias*                                        |
+|---|---|
+|Requisito Associado | RF-09 - Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT10 - Responsividade*                                        |
+|---|---|
+|Requisito Associado | RNF-01 - A aplicação deve ser responsiva.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT11 - Velocidade*                                        |
+|---|---|
+|Requisito Associado | RNF-02 - A aplicação deve processar requisições do usuário em no máximo 3s.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT12 - Proteção de dados*                                        |
+|---|---|
+|Requisito Associado | RNF-03 - Estar em conformidade com as leis e regulamentações de proteção de dados aplicáveis.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+
+|*Caso de Teste*                                 |*CT13 - Adaptar a diferentes tamanhos de tela*                                        |
+|---|---|
+|Requisito Associado | RNF-04 - Deve se adaptar a diferentes tamanhos de tela e resoluções.|
+|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
 
 
 ## Avaliação dos Testes de Software
