@@ -58,10 +58,10 @@ function showCategoryFormModal({ nome = '', icone = '🏠', tipo = 'despesas', i
                             <option value="📚">📚</option>
                         </select>
                     </div>
-                    <div class="category-form-actions">
-                        <button type="button" class="category-form-btn-cancel" onclick="closeModal()">Cancelar</button>
-                        <button type="submit" class="category-form-btn-confirm" title="Salvar"><span style="font-size:20px;">✔️</span></button>
-                    </div>
+                </div>
+                <div class="category-form-actions">
+                    <button type="button" class="category-form-btn-cancel" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="category-form-btn-confirm" title="Salvar"><span style="font-size:20px;">✔️</span></button>
                 </div>
             </form>
         </div>

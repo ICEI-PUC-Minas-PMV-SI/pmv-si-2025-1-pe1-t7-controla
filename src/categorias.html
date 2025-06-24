@@ -7,33 +7,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/categorias.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <script src="js/sidebar.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">C+</div>
-        <button title="Adicionar">+</button>
-        <a href="dashboard.html" title="Home"><i class="ph ph-house"></i></a>
-        <a href="categorias.html" class="active" title="Categorias"><i class="ph ph-list-bullets"></i></a>
-        <a href="transacoes.html" title="Transações"><i class="ph ph-arrows-left-right"></i></a>
-        <a href="receitas.html" title="Receitas"><i class="ph ph-chart-line-up"></i></a>
-        <a href="despesas.html" title="Despesas"><i class="ph ph-chart-line-down"></i></a>
-        <a href="#" title="Configurações"><i class="ph ph-gear-six"></i></a>
-    </div>
-
     <div class="main-content">
         <div class="header">
-            <select class="month-select">
-                <option>Outubro</option>
-                <option>Setembro</option>
-                <option>Agosto</option>
-                <option>Julho</option>
-                <option>Junho</option>
-                <option>Maio</option>
-            </select>
-            <div class="user-info">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
-                João Oliveira
+          <div class="selects-container">
+            <div class="month-select-wrapper">
+              <select class="month-select" id="yearSelect">
+                <!-- Opções serão geradas via JS -->
+              </select>
+              <i class="ph ph-caret-down"></i>
             </div>
+            <div class="month-select-wrapper">
+              <select class="month-select" id="monthSelect">
+                <option value="0">Janeiro</option>
+                <option value="1">Fevereiro</option>
+                <option value="2">Março</option>
+                <option value="3">Abril</option>
+                <option value="4">Maio</option>
+                <option value="5">Junho</option>
+                <option value="6">Julho</option>
+                <option value="7">Agosto</option>
+                <option value="8">Setembro</option>
+                <option value="9">Outubro</option>
+                <option value="10">Novembro</option>
+                <option value="11">Dezembro</option>
+              </select>
+              <i class="ph ph-caret-down"></i>
+            </div>
+          </div>
+          <div class="user-info">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
+            João Oliveira
+          </div>
         </div>
 
         <div class="categories-header">
