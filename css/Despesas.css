@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  position: relative;
 }
 
 .header h1 {
@@ -32,7 +33,10 @@ body {
   color: #e0e4db;
 }
 
+/* Estilos exatamente iguais ao dashboard */
 .header .user-info {
+  position: absolute;
+  right: 0;
   display: flex;
   align-items: center;
   background: var(--surface-color-dark-mode-hover);
@@ -42,7 +46,7 @@ body {
 }
 
 .header .user-info img {
-  width: 36px;
+  width: 36px; 
   height: 36px;
   border-radius: 50%;
 }
@@ -50,6 +54,27 @@ body {
 .header .user-info span {
   color: var(--text-color-dark-mode);
   font-size: 16px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Estilo do botão de logout igual ao dashboard */
+.logout-btn {
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: var(--text-color-dark-mode);
+  font-size: 1.5rem; 
+  padding: 0 0 0 8px; 
+  display: flex; 
+  align-items: center;
+  width: auto !important; /* Sobrescreve a largura global dos botões */
+  height: auto !important; /* Sobrescreve a altura global dos botões */
+  margin: 0 !important; /* Remove margens globais */
+  float: none !important; /* Remove float global */
+}
+
+.logout-btn:hover { 
+  color: var(--stroke-color-dark-mode); 
 }
 
 .wrapper {

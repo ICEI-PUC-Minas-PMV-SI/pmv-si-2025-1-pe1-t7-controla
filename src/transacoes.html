@@ -42,67 +42,45 @@
         </div>
       </div>
     </div>
+    <div class="resumo-transacoes">
+      <div class="resumo-item">
+        <span class="resumo-label">Total Receitas:</span>
+        <span class="resumo-valor receita" id="totalReceitas">R$ 0,00</span>
+      </div>
+      <div class="resumo-item">
+        <span class="resumo-label">Total Despesas:</span>
+        <span class="resumo-valor despesa" id="totalDespesas">R$ 0,00</span>
+      </div>
+      <div class="resumo-item">
+        <span class="resumo-label">Saldo:</span>
+        <span class="resumo-valor saldo" id="saldoTotal">R$ 0,00</span>
+      </div>
+    </div>
     <div class="transacoes-table-container">
       <table class="transacoes-table">
         <thead>
           <tr>
-            <th>Situação</th>
             <th>Data</th>
             <th>Valor</th>
             <th>Categoria</th>
-            <th>Conta</th>
+            <th>Método da Transação</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Efetuada</td>
-            <td>21/01/25</td>
-            <td>R$ 750,00</td>
+            <td><input type="text" class="editable" placeholder="dd/mm/aaaa" /></td>
+            <td><input type="text" class="editable" placeholder="R$ 0,00" /></td>
             <td>
                 <select>
-                    <option>Selecione...</option>
-                    <option>Alimentação</option>
-                    <option>Aluguel</option>
-                    <option>Água</option>
-                    <option>Bem-estar</option>
-                    <option>Educação</option>
-                    <option>Energia</option>
-                    <option>Internet</option>
-                    <option>Lazer</option>
-                    <option>Transporte</option>
+                    <option>Carregando categorias...</option>
                 </select>
             </td>
-            <td>Inter</td>
-            <td class="actions">
-              <button title="Editar"><i class="ph ph-pencil"></i></button>
-              <button title="Duplicar"><i class="ph ph-copy"></i></button>
-              <button title="Excluir"><i class="ph ph-trash"></i></button>
-              <button title="Salvar"><i class= "ph ph-check"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Efetuada</td>
-            <td>16/01/25</td>
-            <td>R$ 450,00</td>
+            <td><input type="text" class="editable" placeholder="Método" /></td>
             <td>
-                <select>
-                    <option>Selecione...</option>
-                    <option>Alimentação</option>
-                    <option>Aluguel</option>
-                    <option>Água</option>
-                    <option>Bem-estar</option>
-                    <option>Educação</option>
-                    <option>Energia</option>
-                    <option>Internet</option>
-                    <option>Lazer</option>
-                    <option>Transporte</option>
-                </select>
-            </td>
-            <td>VR</td>
-            <td class="actions">
+              <div class="actions">
               <button title="Editar"><i class="ph ph-pencil"></i></button>
-              <button title="Duplicar"><i class="ph ph-copy"></i></button>
+              <button title="Criar"><i class="ph ph-plus"></i></button>
               <button title="Excluir"><i class="ph ph-trash"></i></button>
               <button title="Salvar"><i class= "ph ph-check"></i></button>
             </td>
@@ -345,6 +323,5 @@
       </table>
     </div>
   </div>
-  <script src="js/transacoes.js"></script>
 </body>
 </html>
