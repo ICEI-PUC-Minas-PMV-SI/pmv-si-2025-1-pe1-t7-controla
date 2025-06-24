@@ -10,7 +10,7 @@ export function setupModeButtons(onModeChange) {
   const modeMap = {
     'diário': 'diario',
     'semanal': 'semanal',
-    'mensal': 'mensal'
+    'mensal': 'mensal',
   };
 
   document.querySelectorAll('.chart-controls button').forEach(btn => {

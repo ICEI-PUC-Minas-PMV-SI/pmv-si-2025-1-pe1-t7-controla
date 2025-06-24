@@ -4,81 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Despesas | Controla+</title>
     <link rel="stylesheet" href="../css/Despesas.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
     <script src="js/sidebar.js"></script>
+    <script src="js/user-header.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1>Registro de Despesas</h1>
-        <div class="registro" id="Reg">
-            <div id="mensagemSucesso"></div>
-            <form id="formDespesa">
-                <div class="campo">
-                    <div class="label-icone">
-                        <label>Data</label>
-                        <div class="icone"><i class="ph ph-calendar-dots"></i></div>
-                    </div>
-                    <input type="text" id="data" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
-                    <div class="error" id="erroData"></div>
-                </div>
-                <div class="campo">
-                    <div class="label-icone">
-                        <label>Valor</label>
-                        <div class="icone"><i class="ph ph-coins"></i></div>
-                    </div>
-                    <input type="text" id="valor" placeholder="R$ 0,00" autocomplete="off">
-                    <div class="error" id="erroValor"></div>
-                </div>
-                <div class="campo">
-                    <div class="label-icone">
-                        <label>Categoria</label>
-                        <div class="icone"><i class="ph ph-replit-logo"></i></div>
-                    </div>
-                    <select id="categoria">
-                        <option>Alimentação</option>
-                        <option>Aluguel</option>
-                        <option>Água</option>
-                        <option>Bem-estar</option>
-                        <option>Educação</option>
-                        <option>Energia</option>
-                        <option>Internet</option>
-                        <option>Lazer</option>
-                        <option>Transporte</option>
-                        <option>Saúde</option>
-                    </select>
-
-                </div>
-                <div class="campo">
-                    <div class="label-icone">
-                        <label>Método de pagamento</label>
-                        <div class="icone"><i class="ph ph-cardholder"></i></div>
-                    </div>
-                    <select id="metodoPagamento">
-                        <option>Boleto</option>
-                        <option>Cartão de crédito</option>
-                        <option>Cartão de débito</option>
-                        <option>Dinheiro</option>
-                        <option>Débito automático</option>
-                        <option>Transferência</option>
-                    </select>
-
-                </div>
-                <button type="submit">Salvar</button>
-            </form>
+    <div class="main-content">
+        <div class="header">
+            <h1>Registro de Despesas</h1>
+            <div class="user-info">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário" id="userAvatar">
+                <span id="userName">Carregando...</span>
+            </div>
         </div>
+        
+        <div class="wrapper">
+            <div class="registro" id="Reg">
+                <div id="mensagemSucesso"></div>
+                <form id="formDespesa">
+                    <div class="campo">
+                        <div class="label-icone">
+                            <label>Data</label>
+                            <div class="icone"><i class="ph ph-calendar-dots"></i></div>
+                        </div>
+                        <input type="text" id="data" maxlength="10" placeholder="dd/mm/aaaa" autocomplete="off">
+                        <div class="error" id="erroData"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="label-icone">
+                            <label>Valor</label>
+                            <div class="icone"><i class="ph ph-coins"></i></div>
+                        </div>
+                        <input type="text" id="valor" placeholder="R$ 0,00" autocomplete="off">
+                        <div class="error" id="erroValor"></div>
+                    </div>
+                    <div class="campo">
+                        <div class="label-icone">
+                            <label>Categoria</label>
+                            <div class="icone"><i class="ph ph-replit-logo"></i></div>
+                        </div>
+                        <select id="categoria">
+                            <option>Alimentação</option>
+                            <option>Aluguel</option>
+                            <option>Água</option>
+                            <option>Bem-estar</option>
+                            <option>Educação</option>
+                            <option>Energia</option>
+                            <option>Internet</option>
+                            <option>Lazer</option>
+                            <option>Transporte</option>
+                            <option>Saúde</option>
+                        </select>
 
-        <div class="histórico">
-            <h2>Últimas Despesas</h2>
-            <div class="container" id="box2">
-                <ul id="lista"></ul>
+                    </div>
+                    <div class="campo">
+                        <div class="label-icone">
+                            <label>Método de pagamento</label>
+                            <div class="icone"><i class="ph ph-cardholder"></i></div>
+                        </div>
+                        <select id="metodoPagamento">
+                            <option>Boleto</option>
+                            <option>Cartão de crédito</option>
+                            <option>Cartão de débito</option>
+                            <option>Dinheiro</option>
+                            <option>Débito automático</option>
+                            <option>Transferência</option>
+                        </select>
+
+                    </div>
+                    <button type="submit">Salvar</button>
+                </form>
+            </div>
+
+            <div class="histórico">
+                <h2>Últimas Despesas</h2>
+                <div class="container" id="box2">
+                    <ul id="lista"></ul>
+                </div>
             </div>
         </div>
     </div>
-
 
 </body>
 <script src="../js/despesas.js"></script>

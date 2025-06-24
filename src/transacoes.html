@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/transacoes.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script src="js/sidebar.js"></script>
+  <script src="js/user-header.js"></script>
   <script src="../js/transacoes.js"></script>
 </head>
 <body>
@@ -36,8 +37,8 @@
           </select>
         </div>
         <div class="user-info">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário">
-          João Oliveira
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do usuário" id="userAvatar">
+          <span id="userName">Carregando...</span>
         </div>
       </div>
     </div>
@@ -177,32 +178,6 @@
                 </select>
             </td>
             <td>Inter</td>
-            <td class="actions">
-              <button title="Editar"><i class="ph ph-pencil"></i></button>
-              <button title="Duplicar"><i class="ph ph-copy"></i></button>
-              <button title="Excluir"><i class="ph ph-trash"></i></button>
-              <button title="Salvar"><i class= "ph ph-check"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td><input type="text" class="editable" /></td>
-            <td><input type="text" class="editable" /></td>
-            <td><input type="text" class="editable" /></td>
-            <td>
-                <select>
-                    <option>Selecione...</option>
-                    <option>Alimentação</option>
-                    <option>Aluguel</option>
-                    <option>Água</option>
-                    <option>Bem-estar</option>
-                    <option>Educação</option>
-                    <option>Energia</option>
-                    <option>Internet</option>
-                    <option>Lazer</option>
-                    <option>Transporte</option>
-                </select>
-            </td>
-            <td><input type="text" class="editable" /></td>
             <td class="actions">
               <button title="Editar"><i class="ph ph-pencil"></i></button>
               <button title="Duplicar"><i class="ph ph-copy"></i></button>
