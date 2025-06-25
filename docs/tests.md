@@ -227,13 +227,13 @@ Cenário 1: Você é uma pessoa que deseja registrar suas receitas e despesas a 
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
-| 4       | SIM             | 4                    | 39.09 segundos                  |
+| 1       | SIM             | 5                    | 26.60 segundos                  |
+| 2       | SIM             | 5                    | 40.17 segundos                  |
+| 3       | SIM             | 5                    | 23.22 segundos                  |
+| 4       | SIM             | 4                    | 31.15 segundos                  |
 |  |  |  |  |
-| **Média**     | 100%           | 5                | 28.02 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
+| **Média**     | 95%           | 5                | 30.29 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.78 segundos |
 
 
     Muito intuitivo. 
