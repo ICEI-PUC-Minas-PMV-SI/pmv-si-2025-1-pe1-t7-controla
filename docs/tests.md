@@ -113,7 +113,7 @@
 |*Caso de Teste*                                 |*CT01 - Cadastro*                                         |
 |---|---|
 |Requisito Associado | RF-01 - Permitir cadastro do usuário|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
+|Link do vídeo do teste realizado: | https://lnk.ink/xQ6BY | 
 
 |*Caso de Teste*                                 |*CT02 - Login*                                        |
 |---|---|
