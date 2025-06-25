@@ -216,7 +216,7 @@ Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as info
 |---------------|----------------------|
 | 1             | Você é uma pessoa que deseja registrar suas receitas e despesas a fim de estar ciente do seu saldo atual. |
 | 2             | Você é uma pessoa que deseja visualizar de forma clara a porcentagem de gastos com cartão de Crédito e cartão de Débito. |
-| 3             | Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria e forma de transação. |
+| 3             | Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria podendo editar conforme suas categorias pessoais |
 | 4             | Você é uma pessoa que deseja visualizar de forma clara um gráfico que compara Despesas e Receitas. |
 
 
@@ -232,7 +232,7 @@ Cenário 1: Você é uma pessoa que deseja registrar suas receitas e despesas a 
 | 3       | SIM             | 5                    | 23.22 segundos                  |
 | 4       | SIM             | 4                    | 31.15 segundos                  |
 |  |  |  |  |
-| **Média**     | 95%           | 5                | 30.29 segundos                           |
+| **Média**     | 100%           | 4,75                | 30.29 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 13.78 segundos |
 
 
@@ -243,30 +243,30 @@ Cenário 2: Você é uma pessoa que deseja visualizar de forma clara a porcentag
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 4                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 5                    | 36.21 segundos                          |
-| 4       | SIM             | 5                    | 36.21 segundos                          |
+| 1       | SIM             | 4                    | 28.03 segundos                          |
+| 2       | SIM             | 5                    | 35.23 segundos                          |
+| 3       | SIM             | 5                    | 30.21 segundos                          |
+| 4       | SIM             | 5                    | 31.42 segundos                          |
 |  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| **Média**     | 100%           | 4.75                | 31.22 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 10.15 segundos |
 
 
     Importante poder visualizar essas informações.
     Sugestão de melhoria: poder visualizar tambem um comparativo de outras formas de pagamento.
     
 
- Cenário 3: Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria e forma de transação.
+ Cenário 3: Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria podendo editar conforme suas categorias pessoais.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 4                    | 31.42 segundos                          |
-| 3       | SIM             | 5                    | 36.21 segundos                          |
-| 4       | SIM             | 4                    | 36.21 segundos                          |
+| 1       | SIM             | 5                    | 40.51 segundos                          |
+| 2       | SIM             | 4                    | 45.18 segundos                          |
+| 3       | SIM             | 5                    | 39.52 segundos                          |
+| 4       | SIM             | 4                    | 41.15 segundos                          |
 |  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| **Média**     | 100%           | 4.5                | 41.59 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 24.41 segundos |
 
 
   
@@ -276,26 +276,29 @@ Cenário 2: Você é uma pessoa que deseja visualizar de forma clara a porcentag
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 4                    | 31.42 segundos                          |
-| 3       | SIM             | 5                    | 36.21 segundos                          |
-| 4       | SIM             | 5                    | 36.21 segundos                          |
+| 1       | SIM             | 5                    | 31.22 segundos                          |
+| 2       | SIM             | 4                    | 28.43 segundos                          |
+| 3       | SIM             | 5                    | 32.26 segundos                          |
+| 4       | SIM             | 5                    | 39.12 segundos                          |
 |  |  |  |  |
-| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+| **Média**     | 100%           | 4.75                | 32.73 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 12.27 segundos |
 
 
  
 
 ## Avaliação dos Testes de Usabilidade
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta bons resultados quanto à taxa de sucesso na interação dos usuários, tendo em vista que os cenários propostos foram concluídos com sucesso.
 
-Além disso, a aplicação obteve também uma elevada satisfação subjetiva dos usuários no momento que realizavam os cenários propostos. Prova são as médias das avaliações em cada um dos cenários, que variou entre 4 (bom) e 5 (ótimo).
+Com base nos testes realizados, foi possível verificar que a aplicação apresentou um desempenho muito positivo quanto à usabilidade. Em todos os quatro cenários propostos, os usuários obtiveram 100% de taxa de sucesso, concluindo as tarefas com êxito.
 
-Com relação ao tempo para conclusão de cada tarefa/cenário, notamos discrepância entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Tal discrepância, em certa medida, é esperada, tendo em vista que o desenvolvedor já tem prévio conhecimento de toda a interface da aplicação, do posicionamento dos elementos, lógica de organização das páginas, etc.
+A satisfação subjetiva também se destacou, com média de 4.68 pontos, o que demonstra que os usuários consideraram a interação com a plataforma agradável, compreensível e eficiente. Comentários adicionais reforçaram a importância de algumas funcionalidades, como a visualização de informações financeiras por forma de pagamento, além de sugestões construtivas para aprimorar a interface.
 
-Contudo, tendo em vista que a diferença foi relevante (por exemplo, 113 segundos — média usuários — contra 25 segundos — especialista — no cenário três), e ainda os comentários feitos por alguns usuários, entendemos haver oportunidades de melhoria na usabilidade da aplicação.
+Em relação ao tempo de conclusão das tarefas, observou-se uma diferença significativa entre os usuários e o especialista/desenvolvedor, o que é esperado, considerando o conhecimento prévio do desenvolvedor sobre o sistema. Por exemplo, no primeiro cenário, os usuários levaram em média 30.29 segundos, enquanto o especialista concluiu em 13.78 segundos. Esse padrão se repetiu nos demais cenários.
+
+Apesar dessas diferenças de tempo, o desempenho dos usuários foi considerado satisfatório. Ainda assim, os resultados indicam oportunidades de melhoria na usabilidade, especialmente no que diz respeito à otimização do fluxo de navegação e à apresentação visual de certas informações, para torná-las ainda mais acessíveis e intuitivas.
+
+De modo geral, os testes demonstram que a aplicação cumpre bem sua proposta de oferecer uma solução prática e eficaz para o controle financeiro, mesmo para usuários com pouca familiaridade com esse tipo de sistema.
 
 
 
