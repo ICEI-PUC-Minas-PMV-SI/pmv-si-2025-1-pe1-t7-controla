@@ -128,32 +128,32 @@
 |*Caso de Teste*                                 |*CT04 - Gráfico de cartões*                                        |
 |---|---|
 |Requisito Associado | RF-04 - Gerar um gráfico de pizza: Comparativo cartão de crédito vs. débito nas despesas|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/sfNqA |
 
 |*Caso de Teste*                                 |*CT05 - Gráfico de receitas e despesas*                                        |
 |---|---|
 |Requisito Associado | RF-05 - Gerar um gráfico de linhas: Evolução de receitas e despesas ao longo dos dias, semanas, meses|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/akwMC |
 
 |*Caso de Teste*                                 |*CT06 - Edição de categorias*                                        |
 |---|---|
 |Requisito Associado | RF-06 - Permitir que o usuário edite as categorias.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/KH2r4 |
 
 |*Caso de Teste*                                 |*CT07 - Registro de Receitas*                                        |
 |---|---|
 |Requisito Associado | RF-07 - Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc).|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/n0Yag |
 
 |*Caso de Teste*                                 |*CT08 - Registro de Despesas*                                        |
 |---|---|
 |Requisito Associado | RF-08 - Permitir o registro de despesas com a descrição de data, valor, categoria, método de pagamento, histórico.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/QNfGE |
 
 |*Caso de Teste*                                 |*CT09 - Apresentar um dashboard*                                        |
 |---|---|
 |Requisito Associado | RF-09 - Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/4ilSq |
 
 |*Caso de Teste*                                 |*CT10 - Responsividade*                                        |
 |---|---|
