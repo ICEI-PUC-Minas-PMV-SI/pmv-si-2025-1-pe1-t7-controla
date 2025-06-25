@@ -118,12 +118,12 @@
 |*Caso de Teste*                                 |*CT02 - Login*                                        |
 |---|---|
 |Requisito Associado | RF-02 - Permitir login do usuário|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
+|Link do vídeo do teste realizado: | https://lnk.ink/1PomD | 
 
 |*Caso de Teste*                                 |*CT03 - Recuperar senha*                                        |
 |---|---|
 |Requisito Associado | RF-03 - Permitir o usuário recuperar a senha|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/8NNet |
 
 |*Caso de Teste*                                 |*CT04 - Gráfico de cartões*                                        |
 |---|---|
