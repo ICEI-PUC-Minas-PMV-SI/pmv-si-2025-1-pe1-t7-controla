@@ -173,7 +173,7 @@
 |*Caso de Teste*                                 |*CT13 - Transações*                                        |
 |---|---|
 |Requisito Associado | RF-10 - Permitir que o usuário veja, edite ou delete todas as transações realizadas durante o período do mês.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Link do vídeo do teste realizado: | https://lnk.ink/1EHJQ |
 
 
 ## Avaliação dos Testes de Software
