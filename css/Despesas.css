@@ -305,3 +305,45 @@ button:hover {
     margin-bottom: 10px;
   }
 }
+
+/* Estilo para o botão de edição na foto atual */
+.user-info {
+  position: relative;
+}
+
+.edit-photo-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: var(--stroke-color-dark-mode);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--surface-color-dark-mode);
+  font-size: 12px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  /* Sobrescrever propriedades globais dos botões */
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 !important;
+  float: none !important;
+  border-radius: 50% !important;
+  background-color: var(--stroke-color-dark-mode) !important;
+}
+
+.user-info:hover .edit-photo-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.edit-photo-btn:hover {
+  background-color: var(--highlight-color-dark-mode) !important;
+  transform: scale(1.1);
+}

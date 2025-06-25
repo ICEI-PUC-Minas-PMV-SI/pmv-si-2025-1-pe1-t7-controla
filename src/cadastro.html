@@ -60,7 +60,14 @@
                                 nome: nome,
                                 email: email,
                                 password: password,
+                                foto: null
                             };
+
+                            const savedPhoto = localStorage.getItem('userPhoto');
+                            if (savedPhoto) {
+                                usuario.foto = savedPhoto;
+                                localStorage.removeItem('userPhoto');
+                            }
 
                             localStorage.setItem(email, JSON.stringify(usuario));
                             alert("Cadastro realizado com sucesso. Por favor, volte à página de login.");
