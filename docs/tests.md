@@ -178,7 +178,14 @@
 
 ## Avaliação dos Testes de Software
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+Os testes realizados apresentaram resultados satisfatórios, confirmando o bom desempenho do sistema. Os principais requisitos funcionais e não funcionais definidos na fase inicial do projeto foram plenamente atendidos. Além disso, o design manteve-se consistente e alinhado ao longo de toda a aplicação.
+
+A inclusão de gráficos contribuiu para uma navegação mais intuitiva e visualmente atrativa, facilitando a compreensão dos dados e reforçando o objetivo central da plataforma: oferecer uma solução simples, prática e acessível para o controle de finanças pessoais. A proposta é atender tanto usuários com rotinas corridas quanto aqueles com pouca experiência em registrar receitas e despesas.
+
+O módulo de registro financeiro permite ao usuário inserir as informações mais relevantes sobre seus gastos e ganhos, proporcionando maior clareza sobre sua situação econômica.
+
+Vale destacar que algumas funcionalidades desejadas não puderam ser implementadas devido a limitações técnicas, metodológicas e de linguagem impostas ao escopo do projeto. No entanto, os resultados alcançados demonstram a viabilidade e o potencial da plataforma como ferramenta de apoio à organização financeira.
+
 
 # Testes de Usabilidade
 
@@ -202,53 +209,83 @@ Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo util
 
 Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
 
-Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
-
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
-
 
 ## Cenários de Teste de Usabilidade
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
 | 1             | Você é uma pessoa que deseja registrar suas receitas e despesas a fim de estar ciente do seu saldo atual. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
+| 2             | Você é uma pessoa que deseja visualizar de forma clara a porcentagem de gastos com cartão de Crédito e cartão de Débito. |
+| 3             | Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria e forma de transação. |
+| 4             | Você é uma pessoa que deseja visualizar de forma clara um gráfico que compara Despesas e Receitas. |
 
 
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você é uma pessoa que deseja registrar suas receitas e despesas a fim de estar ciente do seu saldo atual.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
 | 1       | SIM             | 5                    | 27.87 segundos                  |
 | 2       | SIM             | 5                    | 17.11 segundos                  |
 | 3       | SIM             | 5                    | 39.09 segundos                  |
+| 4       | SIM             | 4                    | 39.09 segundos                  |
 |  |  |  |  |
 | **Média**     | 100%           | 5                | 28.02 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
 
 
-    Comentários dos usuários: Achei o site muito bom e intuitivo. 
-    Não tive dificuldades e acho que ficou bem intuitivo.
+    Muito intuitivo. 
 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Você é uma pessoa que deseja visualizar de forma clara a porcentagem de gastos com cartão de Crédito e cartão de Débito.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
+| 1       | SIM             | 4                    | 22.54 segundos                          |
 | 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 4                    | 36.21 segundos                          |
+| 3       | SIM             | 5                    | 36.21 segundos                          |
+| 4       | SIM             | 5                    | 36.21 segundos                          |
 |  |  |  |  |
 | **Média**     | 100%           | 4.67                | 30.05 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
 
 
-    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
-    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
-    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+    Importante poder visualizar essas informações.
+    Sugestão de melhoria: poder visualizar tambem um comparativo de outras formas de pagamento.
+    
+
+ Cenário 3: Você é uma pessoa que deseja registrar dados do valor que entra e sai filtrado por categoria e forma de transação.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 22.54 segundos                          |
+| 2       | SIM             | 4                    | 31.42 segundos                          |
+| 3       | SIM             | 5                    | 36.21 segundos                          |
+| 4       | SIM             | 4                    | 36.21 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+
+
+  
+
+
+  Cenário 4: Você é uma pessoa que deseja visualizar de forma clara um gráfico que compara Despesas e Receitas.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| 1       | SIM             | 5                    | 22.54 segundos                          |
+| 2       | SIM             | 4                    | 31.42 segundos                          |
+| 3       | SIM             | 5                    | 36.21 segundos                          |
+| 4       | SIM             | 5                    | 36.21 segundos                          |
+|  |  |  |  |
+| **Média**     | 100%           | 4.67                | 30.05 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+
+
+ 
 
 ## Avaliação dos Testes de Usabilidade
 
