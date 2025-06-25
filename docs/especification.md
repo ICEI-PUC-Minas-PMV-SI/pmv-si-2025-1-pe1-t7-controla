@@ -72,6 +72,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-07|  Permitir o registro de todas as fontes de receita (salário, freelancers, investimentos, etc.) |ALTA|
 |RF-08|  Permitir o registro de despesas com a descrição de data, valor, categoria, método de pagamento, histórico.      |ALTA|
 |RF-09|  Apresentar um dashboard com informações importantes para análise da conta de forma fácil e rápida      |ALTA| 
+|RF-10|  Permitir que o usuário veja, edite ou delete todas as transações realizadas durante o período do mês.      |ALTA| 
 
 
 ### Requisitos não Funcionais
