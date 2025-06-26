@@ -48,8 +48,8 @@
  :--------------: | ------------
 **Procedimento**  | 1) Abrir a tela de categorias <br> 2) Clique no botão "+Nova Categoria" <br> 3) Preencha todos os campos <br> 4) Clique no botão de confirmação <br>
 **Requisitos associados** | RF-06
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Permitir que o usuário edite categorias.
+**Dados de entrada** | Nova categoria, descrição, tipo, ícone.
 **Resultado obtido** | Sucesso
 
 **Caso de Teste** | **CT07 - Registro de Receitas**
@@ -81,7 +81,7 @@
 **Procedimento**  | 1) Abrir o site em diferentes tipos de telas <br> 
 **Requisitos associados** | RF-10
 **Resultado esperado** | Site se adapta para diferentes tipos de telas
-**Dados de entrada** | 
+**Dados de entrada** | Teste realizado alterando as dimensões de 1365px  x 945px para 414px x 896.
 **Resultado obtido** | Sucesso
 
 **Caso de Teste** | **CT11 - Velocidade**
