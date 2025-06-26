@@ -46,8 +46,8 @@
 
 **Caso de Teste** | **CT06 - Edição de categorias**
  :--------------: | ------------
-**Procedimento**  | 1) <br> 
-**Requisitos associados** | RF-00
+**Procedimento**  | 1) Abrir a tela de categorias <br> 2) Clique no botão "+Nova Categoria" <br> 3) Preencha todos os campos <br> 4) Clique no botão de confirmação <br>
+**Requisitos associados** | RF-06
 **Resultado esperado** | 
 **Dados de entrada** | 
 **Resultado obtido** | Sucesso
@@ -106,7 +106,7 @@
 **Requisitos associados** | RF-10
 **Resultado esperado** | Permitir que o usuário veja, edite ou delete todas as transações realizadas durante o período do mês.
 **Dados de entrada** | Data, Valor, Categoria, Método de transações, Ações
-**Resultado obtido** | Sucesso
+**Resultado obtido** | Fracasso
 
 ## Registro dos Testes de Software
 
