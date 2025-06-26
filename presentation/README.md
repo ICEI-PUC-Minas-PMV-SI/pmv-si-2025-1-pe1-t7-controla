@@ -16,11 +16,9 @@ Controla+
 
 ## Conjunto de Slides
  Clique para:
-<p align="center">
-  <a href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/presentation/Apresentacao%20Controla%2B.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Acessar%20Slide-3B6939?style=for-the-badge&logoColor=white" alt="Acessar Slide">
-  </a>
-</p>
+ 
+ [![](https://img.shields.io/badge/Acessar%20Slide-3B6939?style=for-the-badge&logoColor=white)](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-1-pe1-t7-controla/blob/main/presentation/Apresentacao%20Controla%2B.pdf)
+
 
 ## Vídeo de demonstração
 
