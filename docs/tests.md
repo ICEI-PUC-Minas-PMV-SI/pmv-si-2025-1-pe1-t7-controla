@@ -157,8 +157,8 @@
 
 |*Caso de Teste*                                 |*CT10 - Responsividade*                                        |
 |---|---|
-|Requisito Associado | RNF-01 - A aplicação deve ser responsiva.|
-|Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar |
+|Requisito Associado | RNF-01 - A aplicação deve ser responsiva em diferentes tipos de tela.|
+|Link do vídeo do teste realizado: | https://lnk.ink/JJbQV |
 
 |*Caso de Teste*                                 |*CT11 - Velocidade*                                        |
 |---|---|
